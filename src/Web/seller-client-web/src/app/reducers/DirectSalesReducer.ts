@@ -189,7 +189,6 @@ export const reducer: Reducer<DirectSaleState> = (
     }
 
     const action = incomingAction as KnownAction;
-    console.log(action.type);
     switch (action.type) {
         case "REQUEST_DIRECTSALES_LIST":
             console.log('REQUEST_DIRECTSALES_LIST');

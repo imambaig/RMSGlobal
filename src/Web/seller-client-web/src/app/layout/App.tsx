@@ -10,6 +10,7 @@ import DirectSaleForm from '../../features/directsales/form/DirectSaleForm';
 import DirectSaleDetails from '../../features/directsales/details/DirectSaleDetails';
 import NotFound from "../layout/NotFound";
 import {ToastContainer} from 'react-toastify'
+import LoginForm from '../../features/user/LoginForm';
 
 const App: React.FC<RouteComponentProps> = ({location }) => {  
 
@@ -29,6 +30,7 @@ const App: React.FC<RouteComponentProps> = ({location }) => {
                             <Route exact path='/directsales' component={DirectSaleDashboard} />
                             <Route path='/directsales/:id' component={DirectSaleDetails} />
                             <Route key={location.key} path={['/createdirectsale', '/manage/:id']} component={DirectSaleForm} />
+                            <Route path="/Login" component={LoginForm} />
                             <Route component={NotFound} />
                         </Switch>
                         

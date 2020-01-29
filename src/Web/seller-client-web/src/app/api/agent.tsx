@@ -1,9 +1,10 @@
 ﻿import axios, { AxiosResponse } from 'axios'
 import { DirectSale } from '../models/directsale';
+import { User,UserFormValues } from '../models/user';
 import { history} from '../..'
 import { toast } from 'react-toastify';
 
-axios.defaults.baseURL = 'http://localhost:5000/api';
+axios.defaults.baseURL = 'http://localhost:5001/api';
 
 axios.interceptors.response.use(undefined, error => {
     if (error.message === "Network Error" && !error.response) {
@@ -21,7 +22,7 @@ axios.interceptors.response.use(undefined, error => {
         toast.error('server error -- check the terminal for more info!')
     }
 
-    throw error;
+    throw error.response;
 })
 
 const responseBody = (response: AxiosResponse) => response.data;
@@ -46,6 +47,13 @@ const DirectSales = {
     delete: (id: string) => requests.del(`/directsales/${id}`)
 };
 
+const Users = {
+    current: (): Promise<User> => requests.get('/user'),
+    login: (user: UserFormValues): Promise<User> => requests.post(`/user/login`, user),
+    register: (user: UserFormValues): Promise<User> => requests.post('/user/register',user)
+}
+
 export default {
-    DirectSales
+    DirectSales,
+    Users
 }
