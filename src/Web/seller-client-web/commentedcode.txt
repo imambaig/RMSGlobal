@@ -1,0 +1,11 @@
+﻿ <DirectSaleDashboard
+                    directsales={directsales}
+                    selectDirectSale={handleSelectedDirectSale}
+                    selectedDirectsale={selectedDirectsale}
+                    editMode={editMode}
+                    setEditMode={setEditMode}
+                    setSelectedDirectsale={setSelectedDirectsale}
+                    createDirectSale={handleCreateDirectSale}
+                    editDirectSale={handleEditDirectSale}
+                    submitting={submitting}
+                /> 

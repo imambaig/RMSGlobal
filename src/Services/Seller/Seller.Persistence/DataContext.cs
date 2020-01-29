@@ -6,6 +6,8 @@ namespace Seller.Persistence
 {
     // dotnet ef migrations add InitialCreate -p Seller.Persistence/ -s Seller.API/
     // dotnet ef migrations add SeedVehicles -p seller.Persistence/ -s seller.API/
+    // dotnet ef migrations add "DirectSaleEntityAdded" -p Seller.Persistence/ -s Seller.API/
+
     public class DataContext:DbContext
     {
         public DataContext(DbContextOptions options) : base(options)
@@ -14,6 +16,8 @@ namespace Seller.Persistence
         }
 
         public DbSet<Vehicle> Vehicles { get; set; }
+
+        public DbSet<DirectSale> DirectSales { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {

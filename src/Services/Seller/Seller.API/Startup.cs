@@ -12,6 +12,10 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.EntityFrameworkCore;
 using Seller.Persistence;
+using MediatR;
+using Seller.Application.DirectSales;
+using FluentValidation.AspNetCore;
+using Seller.API.Middleware;
 
 namespace Seller.API
 {
@@ -31,20 +35,34 @@ namespace Seller.API
             {
                 opt.UseSqlite(Configuration.GetConnectionString("DefaultConnection"));
             });
-            services.AddControllers();
+            services.AddCors(Options =>
+            {
+                Options.AddPolicy("CorsPolicy", policy =>
+                {
+                    policy.AllowAnyHeader().AllowAnyMethod().WithExposedHeaders("WWW-Authenticate").WithOrigins("http://localhost:3000").AllowCredentials();
+                });
+            });
+            services.AddMediatR(typeof(List.Handler).Assembly);
+            services.AddControllers()
+                    .AddFluentValidation(cfg=>
+                    {
+                        cfg.RegisterValidatorsFromAssemblyContaining<Create>();
+                    });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+            app.UseMiddleware<ErrorHandlingMiddleware>();
             if (env.IsDevelopment())
             {
-                app.UseDeveloperExceptionPage();
+                //app.UseDeveloperExceptionPage();
             }
 
             //app.UseHttpsRedirection();
 
             app.UseRouting();
+            app.UseCors("CorsPolicy");
 
             app.UseAuthorization();
 

@@ -35,6 +35,10 @@ namespace Seller.API.Controllers
         public async Task<ActionResult<Vehicle>> Get(int id)
         {
             var vehicle = await _context.Vehicles.FindAsync(id);
+            if (vehicle == null)
+            {
+                return NotFound();
+            }
             return Ok(vehicle);
         }
     }
