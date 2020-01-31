@@ -10,6 +10,26 @@ export default function configureStore(
 ) {
     const middleware = [thunk, routerMiddleware(history)];
 
+    function saveToLocalStorage(state:any) {
+        try {
+            const serializedState = JSON.stringify(state)            
+            localStorage.setItem('state',serializedState)
+        } catch (e) {
+            console.log(e);
+        }
+    }
+
+    function loadFromLocalStorage() {
+        try {
+            const serializedState = localStorage.getItem('state')
+            if (serializedState === null) return undefined
+            return JSON.parse(serializedState)
+        } catch (e) {
+            console.log(e);
+            return undefined;
+        }
+    }
+    const persistedState = loadFromLocalStorage()
     const rootReducer = combineReducers({
         ...reducers,
         router: connectRouter(history)
@@ -22,9 +42,12 @@ export default function configureStore(
         enhancers.push(windowIfDefined.__REDUX_DEVTOOLS_EXTENSION__());
     }
 
-    return createStore(
+    const store= createStore(
         rootReducer,
         initialState,
+       //persistedState,
         compose(applyMiddleware(...middleware), ...enhancers)
     );
+    store.subscribe(()=>saveToLocalStorage(store.getState()))
+    return store;
 }

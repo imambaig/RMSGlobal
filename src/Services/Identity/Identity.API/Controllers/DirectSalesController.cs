@@ -16,6 +16,7 @@ namespace Identity.API.Controllers
     {        
 
         [HttpGet]
+        
         public async Task<ActionResult<List<DirectSale>>> List()
         {
             return await Mediator.Send(new List.Query());

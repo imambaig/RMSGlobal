@@ -12,7 +12,7 @@ import { actionCreators } from '../../../app/reducers/DirectSalesReducer'
 
 
 const DirectSaleDashboard: React.FC = () => {
-    const selector = useSelector((state: ApplicationState) => state.directsales);
+    const selector = useSelector((state: ApplicationState) => state.directsalesstate);
     const dispatch = useDispatch();
     const ensureDataFetched = () => {
         console.log('ensureDataFetched');

@@ -1,12 +1,20 @@
 ﻿import React from 'react'
-import { Menu, Container, Button } from 'semantic-ui-react'
-import {  useDispatch } from 'react-redux'
+import { Menu, Container, Button, Dropdown, Image } from 'semantic-ui-react'
+import {  useDispatch, useSelector } from 'react-redux'
 import { actionCreators } from '../../app/reducers/DirectSalesReducer';
-import { Link, NavLink } from 'react-router-dom';
+import { actionCreators as useractions } from '../../app/reducers/UsersReducer';
+import { Link, NavLink, RouteComponentProps } from 'react-router-dom';
+import { ApplicationState } from '../../app/stores';
 
 
-const NavBar= () => {
+const NavBar: React.FC = () => {
     const dispatch = useDispatch();
+    const selector = useSelector((state: ApplicationState) => state.usersstate);
+    const { isLoggedIn, user } = selector!;
+    const handleLogout = ()=>{
+        dispatch(useractions.logout());
+        // shoud check how to use history object to send back to login page
+    }
     return (
         <Menu fixed='top' inverted>
             <Container>
@@ -20,6 +28,18 @@ const NavBar= () => {
                 <Menu.Item>
                     <Button as={NavLink} to='/createdirectsale' positive content="Create DS" />
                 </Menu.Item>
+                {user && (
+                    <Menu.Item position='right'>
+                        <Image avatar spaced='right' src={user.image ??'/assets/user.png'} />
+                        <Dropdown pointing='top left' text={user.displayName}>
+                            <Dropdown.Menu>
+                                <Dropdown.Item as={Link} to={`/profile/username`} text='My profile' icon='user' />
+                                <Dropdown.Item onClick={() => handleLogout()} to='/'  text='Logout' icon='power'  />
+                            </Dropdown.Menu>
+                        </Dropdown>
+                    </Menu.Item>
+                    )
+                }
             </Container>
 
         </Menu>

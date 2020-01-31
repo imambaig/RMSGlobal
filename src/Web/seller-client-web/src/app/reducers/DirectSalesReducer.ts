@@ -18,11 +18,11 @@ export interface DirectSaleState {
 // ACTIONS - These are serializable (hence replayable) descriptions of state transitions.
 // They do not themselves have any side-effects; they just describe something that is going to happen.
 
-interface RequestDirectSalesAction  {
+interface RequestDirectSalesAction {
     type: "REQUEST_DIRECTSALES_LIST";
 }
 
-interface ReceiveDirectSalesAction  {
+interface ReceiveDirectSalesAction {
     type: "RECEIVE_DIRECTSALES_LIST";
     directsales: DirectSale[];
 }
@@ -41,12 +41,12 @@ interface RequestCreateDirectSaleAction { type: 'REQUEST_CREATE_DIRECTSALE'; dir
 interface ReceiveCreateDirectSaleAction { type: 'RECEIVE_CREATE_DIRECTSALE'; directsale: DirectSale }
 
 interface RequestEditDirectSaleAction { type: 'REQUEST_EDIT_DIRECTSALE'; directsale: DirectSale }
-interface ReceiveEditDirectSaleAction { type: 'RECEIVE_EDIT_DIRECTSALE'; directsale: DirectSale } 
+interface ReceiveEditDirectSaleAction { type: 'RECEIVE_EDIT_DIRECTSALE'; directsale: DirectSale }
 
 export interface RequestLoadDirectSaleAction { type: 'REQUEST_LOAD_DIRECTSALE'; id: string }
 export interface ReceiveLoadDirectSaleAction { type: 'RECEIVE_LOAD_DIRECTSALE'; directsale: DirectSale }
 
-interface ClearDirectSaleAction {type:'CLEAR_DIRECTSALE'}
+interface ClearDirectSaleAction { type: 'CLEAR_DIRECTSALE' }
 
 
 // Declare a 'discriminated union' type. This guarantees that all references to 'type' properties contain one of the
@@ -66,9 +66,9 @@ export const actionCreators = {
         // Only load data if it's something we don't already have (and are not already loading)
         console.log('use effect actionCreators');
         const appState = getState();
-        if (appState && appState.directsales) {
+        if (appState && appState.directsalesstate) {
             agent.DirectSales.list()
-                
+
                 .then(response => response as DirectSale[])
                 .then(data => {
                     console.log('action->RECEIVE_DIRECTSALES_LIST');
@@ -77,7 +77,7 @@ export const actionCreators = {
                     })
                     dispatch({
                         type: "RECEIVE_DIRECTSALES_LIST",
-                        directsales:data
+                        directsales: data
                     });
                 }).catch(error => {
                     console.log(error);
@@ -98,7 +98,7 @@ export const actionCreators = {
         getState
     ) => {
         const appState = getState();
-        if (appState && appState.directsales) {
+        if (appState && appState.directsalesstate) {
             agent.DirectSales.create(directsale)
                 .then(data => {
                     dispatch({
@@ -110,7 +110,7 @@ export const actionCreators = {
                 });
             dispatch({
                 type: "REQUEST_CREATE_DIRECTSALE",
-                directsale:directsale
+                directsale: directsale
             });
         }
     },
@@ -119,7 +119,7 @@ export const actionCreators = {
         getState
     ) => {
         const appState = getState();
-        if (appState && appState.directsales) {
+        if (appState && appState.directsalesstate) {
             agent.DirectSales.update(directsale)
                 .then(data => {
                     dispatch({
@@ -133,18 +133,18 @@ export const actionCreators = {
             });
         }
     },
-    loadDirectSale: (id: string) :AppThunkAction< KnownAction > => (
+    loadDirectSale: (id: string): AppThunkAction<KnownAction> => (
         dispatch,
         getState
-    ) => {    
-    const appState = getState();
-        if (appState && appState.directsales) {
+    ) => {
+        const appState = getState();
+        if (appState && appState.directsalesstate) {
             console.log('action REQUEST_LOAD_DIRECTSALE');
             dispatch({
                 type: "REQUEST_LOAD_DIRECTSALE",
-                id:id
+                id: id
             });
-            if (appState.directsales.directsales.find(ds => ds.id === id) === undefined) {
+            if (appState.directsalesstate.directsales.find(ds => ds.id === id) === undefined) {
                 agent.DirectSales.details(id)
                     .then(response => response as DirectSale)
                     .then(data => {
@@ -161,7 +161,7 @@ export const actionCreators = {
                 console.log('action no db RECEIVE_LOAD_DIRECTSALE');
                 dispatch({
                     type: "RECEIVE_LOAD_DIRECTSALE",
-                    directsale: appState.directsales.directsales.find(ds => ds.id === id)!
+                    directsale: appState.directsalesstate.directsales.find(ds => ds.id === id)!
                 });
             }
         }
@@ -177,7 +177,7 @@ const unloadedState: DirectSaleState = {
     isLoading: false,
     directsale: null,
     editMode: false,
-    submitting:false
+    submitting: false
 };
 
 export const reducer: Reducer<DirectSaleState> = (
@@ -201,21 +201,21 @@ export const reducer: Reducer<DirectSaleState> = (
             // Only accept the incoming data if it matches the most recent request. This ensures we correctly
             // handle out-of-order responses.
             //if (action.directsales.length === state.directsales.length) {
-                console.log('RECEIVE_DIRECTSALES_LIST');
+            console.log('RECEIVE_DIRECTSALES_LIST');
             return {
-                    ...unloadedState,
-                    directsales: action.directsales,
-                    isLoading: false
-                };
+                ...unloadedState,
+                directsales: action.directsales,
+                isLoading: false
+            };
             //}
-           
+
             break;
         case "SELECT_DIRECTSALE":
             console.log(action.id);
             return {
                 ...state,
-                editMode:false,
-                directsale: state.directsales.find(ds => ds.id === action.id)??null
+                editMode: false,
+                directsale: state.directsales.find(ds => ds.id === action.id) ?? null
             }
         case "OPEN_DIRECTSALE_FORM":
             return {
@@ -239,7 +239,7 @@ export const reducer: Reducer<DirectSaleState> = (
             return {
                 ...state,
                 editMode: true,
-                directsale: state.directsales.find(ds => ds.id === action.id)??null
+                directsale: state.directsales.find(ds => ds.id === action.id) ?? null
             }
         case "REQUEST_CREATE_DIRECTSALE":
             console.log('REQUEST_CREATE_DIRECTSALE');
@@ -253,10 +253,10 @@ export const reducer: Reducer<DirectSaleState> = (
             state.directsales.push(action.directsale);
             return {
                 ...unloadedState,
-                directsales:state.directsales,
+                directsales: state.directsales,
                 submitting: false,
-                editMode:false
-                
+                editMode: false
+
             };
         case "REQUEST_EDIT_DIRECTSALE":
             console.log('REQUEST_EDIT_DIRECTSALE');
@@ -266,11 +266,11 @@ export const reducer: Reducer<DirectSaleState> = (
                 submitting: true
             };
         case "RECEIVE_EDIT_DIRECTSALE":
-            console.log('RECEIVE_EDIT_DIRECTSALE');                    
+            console.log('RECEIVE_EDIT_DIRECTSALE');
             return {
                 ...unloadedState,
-                directsales: [...state.directsales.filter(ds => ds.id !== action.directsale.id),action.directsale],
-                directsale:action.directsale,
+                directsales: [...state.directsales.filter(ds => ds.id !== action.directsale.id), action.directsale],
+                directsale: action.directsale,
                 submitting: false,
                 editMode: false
 
@@ -279,7 +279,7 @@ export const reducer: Reducer<DirectSaleState> = (
             console.log('Reducer REQUEST_LOAD_DIRECTSALE');
             return {
                 ...state,
-                isLoading:true
+                isLoading: true
             }
         case "RECEIVE_LOAD_DIRECTSALE":
             console.log('Reducer RECEIVE_LOAD_DIRECTSALE');
@@ -296,6 +296,6 @@ export const reducer: Reducer<DirectSaleState> = (
             }
     }
 
-    return unloadedState;
+    return state||unloadedState ;
 
 };

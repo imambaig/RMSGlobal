@@ -11,15 +11,25 @@ import DirectSaleDetails from '../../features/directsales/details/DirectSaleDeta
 import NotFound from "../layout/NotFound";
 import {ToastContainer} from 'react-toastify'
 import LoginForm from '../../features/user/LoginForm';
+import ModalContainer from "../common/modals/ModalContainer";
 
 const App: React.FC<RouteComponentProps> = ({location }) => {  
 
-    const selector = useSelector((state: ApplicationState) => state.directsales);
+    const selector = useSelector((state: ApplicationState) => state.directsalesstate);
     const dispatch = useDispatch();
-
-
+    /*
+     * we need this if we need to 
+    useEffect(() => {
+        if (token) {
+            getUser().finally(() => setAppLoaded())
+        } else {
+            setAppLoaded()
+        }
+    }, [getUser, setAppLoaded, token])
+    */
     return (
         <Fragment>
+            <ModalContainer />
             <ToastContainer position='bottom-right' />
             <Route exact path='/' component={HomePage} />
             <Route path={'/(.+)'} render={() => (

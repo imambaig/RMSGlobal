@@ -15,7 +15,7 @@ interface DetailParams {
 }
 
 const DirectSaleDetails: React.FC<RouteComponentProps<DetailParams>> = ({match,history}) => {
-    const selector = useSelector((state: ApplicationState) => state.directsales);
+    const selector = useSelector((state: ApplicationState) => state.directsalesstate);
     const { directsale } = selector!;
     const dispatch = useDispatch();
     useEffect(() => {

@@ -7,3 +7,11 @@
 
     return new Date(dateString + ' ' + timeString);
 }
+
+export const getTokenFromLocalstore = () => {
+    return localStorage.getItem("jwt");
+}
+
+export const saveTokenToLocalstore = (token:string|null) => {
+    localStorage.setItem("jwt", token!);
+}

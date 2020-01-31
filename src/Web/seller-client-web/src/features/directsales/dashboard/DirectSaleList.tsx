@@ -4,17 +4,21 @@ import { ApplicationState } from '../../../app/stores';
 import { useSelector, useDispatch } from 'react-redux'
 import DirectSaleListItem from './DirectSaleListItem';
 import { DirectSale } from '../../../app/models/directsale';
+import { format} from 'date-fns'
 
 const DirectSaleList = () => {
-    const selector = useSelector((state: ApplicationState) => state.directsales);
+    const selector = useSelector((state: ApplicationState) => state.directsalesstate);
     const { directsales } = selector!;
     const [directsalesByDate, setDirectSalesByDate] = useState< [string, DirectSale[] ][]>([])
     //const [directsalesByDate, setDirectSalesByDate] = useState<DirectSale[]>([]);
     const groupDirectSalesByDate = (directsales: DirectSale[]): [string, DirectSale[]][]=>{
-        const sortedDirectSales = directsales.sort((a, b) => a.endDate.getTime() - b.endDate.getTime());
+        console.log(directsales);
+        const sortedDirectSales = directsales.sort((a, b) => new Date(a.endDate).getTime() - new Date(b.endDate).getTime());
+        //const sortedDirectSales = directsales;//.sort((a, b) => a.id - b.id);
         return Object.entries(sortedDirectSales.reduce((directsales, directsale) => {
             const date = directsale.endDate.toISOString().split('T')[0];
             directsales[date] = directsales[date] ? [...directsales[date], directsale] : [directsale];
+            
             return directsales;
             //setDirectSalesByDate(directsales);
         }, {} as { [key: string]: DirectSale[] })); 
@@ -23,9 +27,11 @@ const DirectSaleList = () => {
 
 
     useEffect(() => {
-        setDirectSalesByDate(groupDirectSalesByDate(directsales));
+        setDirectSalesByDate(groupDirectSalesByDate(directsales)); // check this issue
+        //setDirectSalesByDate(directsales);
        //setDirectSalesByDate(directsales.sort((a, b) => Date.parse(a.endDate) - Date.parse(b.endDate)));
        //console.log(setDirectSalesByDate);
+        //{format(group,'eeee do MMMM')}
     }, [directsalesByDate && directsalesByDate.length]);
     return (
         <Fragment>

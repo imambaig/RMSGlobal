@@ -32,7 +32,7 @@ interface DetailParams {
 }
 
 const DirectSaleForm: React.FC<RouteComponentProps<DetailParams>> = ({ match,history }) => {
-    const selector = useSelector((state: ApplicationState) => state.directsales);
+    const selector = useSelector((state: ApplicationState) => state.directsalesstate);
     const { directsale: initialFormState,submitting } = selector!;
     const dispatch = useDispatch();
     async function fetchData() {

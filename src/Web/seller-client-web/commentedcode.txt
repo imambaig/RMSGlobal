@@ -9,3 +9,290 @@
                     editDirectSale={handleEditDirectSale}
                     submitting={submitting}
                 /> 
+
+
+                ---- import { Action, Reducer } from "redux";
+import { AppThunkAction, ApplicationState, initialApplicationState } from "../stores";
+import { DirectSale } from "../models/directsale";
+import agent from "../api/agent";
+import { history } from '../..';
+// -----------------
+// STATE - This defines the type of data maintained in the Redux store.
+
+export interface DirectSaleState {
+    isLoading: boolean;
+    directsales: DirectSale[];
+    directsale: DirectSale | null;
+    editMode: boolean;
+    submitting: boolean;
+}
+
+// -----------------
+// ACTIONS - These are serializable (hence replayable) descriptions of state transitions.
+// They do not themselves have any side-effects; they just describe something that is going to happen.
+
+interface RequestDirectSalesAction  {
+    type: "REQUEST_DIRECTSALES_LIST";
+}
+
+interface ReceiveDirectSalesAction  {
+    type: "RECEIVE_DIRECTSALES_LIST";
+    directsales: DirectSale[];
+}
+
+export interface SelectDirectSaleAction { type: 'SELECT_DIRECTSALE'; id: string }
+
+export interface OpenDirectSaleFormAction { type: 'OPEN_DIRECTSALE_FORM'; }
+
+export interface OpenDirectSaleEditFormAction { type: 'OPEN_DIRECTSALE_EDIT_FORM'; id: string }
+
+export interface cancelDirectSaleFormOpenAction { type: 'CANCEL_DIRECTSALE_FORM_OPEN'; }
+export interface cancelSelectedDirectSaleAction { type: 'CANCEL_SELECTED_DIRECTSALE'; }
+
+interface RequestCreateDirectSaleAction { type: 'REQUEST_CREATE_DIRECTSALE'; directsale: DirectSale }
+
+interface ReceiveCreateDirectSaleAction { type: 'RECEIVE_CREATE_DIRECTSALE'; directsale: DirectSale }
+
+interface RequestEditDirectSaleAction { type: 'REQUEST_EDIT_DIRECTSALE'; directsale: DirectSale }
+interface ReceiveEditDirectSaleAction { type: 'RECEIVE_EDIT_DIRECTSALE'; directsale: DirectSale } 
+
+export interface RequestLoadDirectSaleAction { type: 'REQUEST_LOAD_DIRECTSALE'; id: string }
+export interface ReceiveLoadDirectSaleAction { type: 'RECEIVE_LOAD_DIRECTSALE'; directsale: DirectSale }
+
+interface ClearDirectSaleAction {type:'CLEAR_DIRECTSALE'}
+
+
+// Declare a 'discriminated union' type. This guarantees that all references to 'type' properties contain one of the
+// declared type strings (and not any other arbitrary string).
+type KnownAction = RequestDirectSalesAction | ReceiveDirectSalesAction | SelectDirectSaleAction | RequestCreateDirectSaleAction | ReceiveCreateDirectSaleAction | OpenDirectSaleFormAction | RequestEditDirectSaleAction
+    | ReceiveEditDirectSaleAction | OpenDirectSaleEditFormAction | cancelDirectSaleFormOpenAction | cancelSelectedDirectSaleAction | RequestLoadDirectSaleAction | ReceiveLoadDirectSaleAction | ClearDirectSaleAction; //imam
+
+// ----------------
+// ACTION CREATORS - These are functions exposed to UI components that will trigger a state transition.
+// They don't directly mutate state, but they can have external side-effects (such as loading data).
+
+export const actionCreators = {
+    requestDirectSales: (): AppThunkAction<KnownAction> => (
+        dispatch,
+        getState
+    ) => {
+        // Only load data if it's something we don't already have (and are not already loading)
+        
+        const appState = getState();
+        
+        if (appState && appState.directsalesstate) {
+           
+            agent.DirectSales.list()
+                
+                .then(response => response as DirectSale[])
+                .then(data => {
+                    
+                    data.forEach(ds => {
+                        ds.endDate = new Date(ds.endDate);
+                    })
+                    dispatch({
+                        type: "RECEIVE_DIRECTSALES_LIST",
+                        directsales:data
+                    });
+                }).catch(error => {
+                    console.log(error);
+                    console.log(getState());
+                })
+            
+            dispatch({
+                type: "REQUEST_DIRECTSALES_LIST"
+            });
+        }
+    },
+    selectDirectSale: (id: String) => ({ type: 'SELECT_DIRECTSALE', id: id } as SelectDirectSaleAction),
+    openDirectSaleForm: () => ({ type: 'OPEN_DIRECTSALE_FORM' } as OpenDirectSaleFormAction),
+    openDirectSaleEditForm: (id: String) => ({ type: 'OPEN_DIRECTSALE_EDIT_FORM', id: id } as OpenDirectSaleEditFormAction),
+    cancelDirectSaleFormOpen: () => ({ type: 'CANCEL_DIRECTSALE_FORM_OPEN' } as cancelDirectSaleFormOpenAction),
+    cancelSelectedDirectSale: () => ({ type: 'CANCEL_SELECTED_DIRECTSALE' } as cancelSelectedDirectSaleAction),
+    createDirectSale: (directsale: DirectSale): AppThunkAction<KnownAction> => (
+        dispatch,
+        getState
+    ) => {
+        const appState = getState();
+        if (appState && appState.directsalesstate) {
+            agent.DirectSales.create(directsale)
+                .then(data => {
+                    dispatch({
+                        type: "RECEIVE_CREATE_DIRECTSALE",
+                        directsale: directsale
+                    })
+                }).catch(error => {
+                    console.log(error);
+                });
+            dispatch({
+                type: "REQUEST_CREATE_DIRECTSALE",
+                directsale:directsale
+            });
+        }
+    },
+    editDirectSale: (directsale: DirectSale): AppThunkAction<KnownAction> => (
+        dispatch,
+        getState
+    ) => {
+        const appState = getState();
+        if (appState && appState.directsalesstate) {
+            agent.DirectSales.update(directsale)
+                .then(data => {
+                    dispatch({
+                        type: "RECEIVE_EDIT_DIRECTSALE",
+                        directsale: directsale
+                    })
+                });
+            dispatch({
+                type: "REQUEST_EDIT_DIRECTSALE",
+                directsale: directsale
+            });
+        }
+    },
+    loadDirectSale: (id: string) :AppThunkAction< KnownAction > => (
+        dispatch,
+        getState
+    ) => {    
+    const appState = getState();
+        if (appState && appState.directsalesstate) {
+            console.log('action REQUEST_LOAD_DIRECTSALE');
+            dispatch({
+                type: "REQUEST_LOAD_DIRECTSALE",
+                id:id
+            });
+            if (appState.directsalesstate!.directsales.find(ds => ds.id === id) === undefined) {
+                agent.DirectSales.details(id)
+                    .then(response => response as DirectSale)
+                    .then(data => {
+                        data.endDate = new Date(data.endDate);
+                        dispatch({
+                            type: "RECEIVE_LOAD_DIRECTSALE",
+                            directsale: data
+                        });
+                    }).catch(error => {
+                        console.log(error);
+                    });
+            } else {
+                dispatch({
+                    type: "RECEIVE_LOAD_DIRECTSALE",
+                    directsale: appState.directsalesstate!.directsales.find(ds => ds.id === id)!
+                });
+            }
+        }
+    },
+    clearDirectSale: () => ({ type: 'CLEAR_DIRECTSALE' } as ClearDirectSaleAction),
+};
+
+// ----------------
+// REDUCER - For a given state and action, returns the new state. To support time travel, this must not mutate the old state.
+
+const unloadedState: DirectSaleState = {
+    directsales: [],
+    isLoading: false,
+    directsale: null,
+    editMode: false,
+    submitting:false
+};
+
+export const reducer: Reducer<DirectSaleState> = (
+    state: DirectSaleState | undefined,
+    incomingAction: Action
+): DirectSaleState => {
+    if (state === undefined) {
+        console.log("state->undefined");
+        return unloadedState;//initialApplicationState;
+    }
+    const dsstate = state;
+    const action = incomingAction as KnownAction;
+    switch (action.type) {
+        case "REQUEST_DIRECTSALES_LIST":
+            dsstate!.isLoading = true;
+            return state;
+            break;  
+        case "RECEIVE_DIRECTSALES_LIST":
+            // Only accept the incoming data if it matches the most recent request. This ensures we correctly
+            // handle out-of-order responses.
+            //if (action.directsales.length === state.directsales.length) {
+            dsstate!.directsales = action.directsales;
+            dsstate!.isLoading = false;           
+            //}
+            return state;
+            break;
+        case "SELECT_DIRECTSALE":
+            dsstate!.editMode = false;
+            dsstate!.directsale = dsstate!.directsales.find(ds => ds.id === action.id) ?? null
+            break;
+        case "OPEN_DIRECTSALE_FORM":
+            dsstate!.editMode = true;
+            dsstate!.directsale = null;
+            break;
+        case "CANCEL_DIRECTSALE_FORM_OPEN":
+            dsstate!.editMode = false;
+        case "CANCEL_SELECTED_DIRECTSALE":
+            dsstate!.directsale = null;
+            break;
+        case "OPEN_DIRECTSALE_EDIT_FORM":
+            dsstate!.editMode = true;
+            dsstate!.directsale = dsstate!.directsales.find(ds => ds.id === action.id) ?? null
+            break;
+        case "REQUEST_CREATE_DIRECTSALE":
+            //dsstate!.directsale = dsstate!.directsales; // do we need this
+            dsstate!.submitting = true;
+            break;
+            /*return {
+                ...unloadedState,
+                directsales: state.directsales,
+                submitting: true
+            };*/
+        case "RECEIVE_CREATE_DIRECTSALE":
+            dsstate!.directsales.push(action.directsale);
+            dsstate!.submitting = false;
+            dsstate!.editMode = false;
+            
+        case "REQUEST_EDIT_DIRECTSALE":
+            dsstate!.submitting = true;
+            /*return {
+                ...unloadedState,
+                directsales: state.directsales,
+                submitting: true
+            };*/
+        case "RECEIVE_EDIT_DIRECTSALE":
+            dsstate!.directsales = [...dsstate!.directsales.filter(ds => ds.id !== action.directsale.id), action.directsale];
+            dsstate!.submitting = false;
+            dsstate!.editMode = false;
+           /* return {
+                ...unloadedState,
+                directsales: [...state.directsales.filter(ds => ds.id !== action.directsale.id),action.directsale],
+                directsale:action.directsale,
+                submitting: false,
+                editMode: false
+
+            };*/
+        case "REQUEST_LOAD_DIRECTSALE":
+            /*return {
+                ...state,
+                isLoading:true
+            }*/
+            break;
+        case "RECEIVE_LOAD_DIRECTSALE":
+            dsstate!.directsale = action.directsale;
+            dsstate!.isLoading = false;
+            /*return {
+                ...state,
+                directsale: action.directsale,
+                isLoading: false
+            }*/
+            break;
+        case "CLEAR_DIRECTSALE":
+            dsstate!.directsale = null;
+            /*return {
+                ...state,
+                directsale: null
+            }*/
+    }
+
+    return {
+        ...dsstate
+    };
+
+};
