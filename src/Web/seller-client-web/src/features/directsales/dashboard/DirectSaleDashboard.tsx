@@ -1,4 +1,4 @@
-﻿import React, { useEffect } from 'react'
+﻿import React, { useEffect, Dispatch } from 'react'
 import { Grid } from 'semantic-ui-react'
 import DirectSaleList from './DirectSaleList'
 import DirectSaleDetails from '../details/DirectSaleDetails'
@@ -13,6 +13,7 @@ import { actionCreators } from '../../../app/reducers/DirectSalesReducer'
 
 const DirectSaleDashboard: React.FC = () => {
     const selector = useSelector((state: ApplicationState) => state.directsalesstate);
+    //const dispatch = useDispatch<Dispatch<typeof actionCreators>>();
     const dispatch = useDispatch();
     const ensureDataFetched = () => {
         console.log('ensureDataFetched');

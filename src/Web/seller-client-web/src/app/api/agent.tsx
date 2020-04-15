@@ -4,7 +4,7 @@ import { User,UserFormValues } from '../models/user';
 import { history} from '../..'
 import { toast } from 'react-toastify';
 
-axios.defaults.baseURL = 'http://localhost:5001/api';
+axios.defaults.baseURL = 'http://localhost:9001';
 
 axios.interceptors.request.use(
     config => {

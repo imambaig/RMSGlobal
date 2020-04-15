@@ -7,6 +7,8 @@ using System.Net;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using System.Linq;
+using Microsoft.EntityFrameworkCore;
 
 namespace Identity.Application.DirectSales
 {
@@ -14,6 +16,7 @@ namespace Identity.Application.DirectSales
     {
         public class Query : IRequest<DirectSale> {
             public Guid Id { get; set; }
+            public string Name { get; set; }
         }
 
         public class Handler : IRequestHandler<Query, DirectSale>
@@ -26,7 +29,8 @@ namespace Identity.Application.DirectSales
             }
             public async Task<DirectSale> Handle(Query request, CancellationToken cancellationToken)
             {
-                var directsale = await _context.DirectSales.FindAsync(request.Id);
+
+                var directsale = request.Id != Guid.Empty ? await _context.DirectSales.FindAsync(request.Id) : await _context.DirectSales.Where(x => x.Name == request.Name).FirstOrDefaultAsync();
 
                 if (directsale == null)
                     throw new RestException(HttpStatusCode.NotFound, new { directsale = "Could not find directsale" });

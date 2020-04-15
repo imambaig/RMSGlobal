@@ -30,6 +30,7 @@ const LoginForm: React.FC<RouteComponentProps> = ({  history })  => {
                 login(values).then(user =>
                 {
                     modalactions.closeModal();
+                    console.log("login",selector);
                     history.push('/directsales');
                 })
                     .catch(error =>

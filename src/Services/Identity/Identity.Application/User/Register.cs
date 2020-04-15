@@ -36,6 +36,7 @@ namespace Identity.Application.User
                 RuleFor(x => x.Password).Password();
             }
 
+
         }
 
         public class Handler : IRequestHandler<Command, User>

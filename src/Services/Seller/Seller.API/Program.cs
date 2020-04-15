@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using RMSGlobal.BuildingBlocks.IntegrationEventLogEF;
 using Seller.Persistence;
 using System;
 
@@ -19,9 +20,15 @@ namespace Seller.API
                 var services = scope.ServiceProvider;
                 try
                 {
+                    var intcontext = services.GetRequiredService<IntegrationEventLogContext>();
+                    intcontext.Database.Migrate();
+
                     var context = services.GetRequiredService<DataContext>();
                     context.Database.Migrate();
                     Seed.SeedData(context);
+
+                    
+                   // MigrateDbContext<IntegrationEventLogContext>((_, __) => { })
                 }
                 catch(Exception ex)
                 {

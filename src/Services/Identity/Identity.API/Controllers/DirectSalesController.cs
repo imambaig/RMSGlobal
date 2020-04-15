@@ -13,8 +13,8 @@ namespace Identity.API.Controllers
     [Route("api/[controller]")]
     [ApiController]
     public class DirectSalesController : BaseController
-    {        
-
+    {
+        [AllowAnonymous]
         [HttpGet]
         
         public async Task<ActionResult<List<DirectSale>>> List()

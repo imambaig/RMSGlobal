@@ -1,0 +1,902 @@
+2020-02-22 16:16:19.787 +00:00 [INF] requestId: 0HLTNMA6HURMB:00000001, previousRequestId: no previous request id, message: EndpointRateLimiting is not enabled for /api/directsales
+2020-02-22 16:16:19.915 +00:00 [INF] requestId: 0HLTNMA6HURMB:00000001, previousRequestId: no previous request id, message: No authentication needed for /directsales
+2020-02-22 16:16:19.919 +00:00 [INF] requestId: 0HLTNMA6HURMB:00000001, previousRequestId: no previous request id, message: /api/directsales route does not require user to be authorised
+2020-02-22 16:16:20.085 +00:00 [INF] requestId: 0HLTNMA6HURMB:00000001, previousRequestId: no previous request id, message: 200 (OK) status code, request uri: http://localhost:5000/api/directsales
+2020-02-22 16:16:20.123 +00:00 [INF] Request: http localhost:9001/directsales  
+Request headers:
+Cache-Control:max-age=0
+Connection:keep-alive
+Accept:text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+Accept-Encoding:gzip, deflate, br
+Accept-Language:en-GB,en-US;q=0.9,en;q=0.8
+Cookie:_ga=GA1.1.745071743.1551113804
+Host:localhost:9001
+User-Agent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.106 Safari/537.36
+Upgrade-Insecure-Requests:1
+Sec-Fetch-Dest:document
+Sec-Fetch-Site:none
+Sec-Fetch-Mode:navigate
+Sec-Fetch-User:?1
+Response: 200: [{"id":"a4b8036c-ea25-4a56-a468-57629f0616cd","name":"DirectSale1","directSaleType":"DS","endDate":"2020-01-26T12:50:30.969139"},{"id":"cf1620d7-13b5-4150-90b0-4e305ff84db2","name":"DirectSale2","directSaleType":"CO","endDate":"2020-01-27T12:50:30.9823357"},{"id":"9a622c1c-94ae-4c17-b684-426d973fed39","name":"DirectSale3","directSaleType":"DS","endDate":"2020-01-28T12:50:30.9823602"},{"id":"f3fcf095-c425-4993-9ab0-4b2198afd372","name":"DirectSale4","directSaleType":"DS","endDate":"2020-01-29T12:50:30.9823645"},{"id":"9f605706-46b2-4332-be97-4a6a526a779f","name":"DirectSale5","directSaleType":"CO","endDate":"2020-01-30T12:50:30.9823889"},{"id":"6a83df25-4fa9-4fbd-9c9f-3d958321229f","name":"DirectSale6","directSaleType":"CO","endDate":"2020-01-31T12:50:30.9823924"},{"id":"959a3e08-0bdc-451e-a98e-dbbaa1462ade","name":"DirectSale7","directSaleType":"DS","endDate":"2020-02-01T12:50:30.9823938"},{"id":"fb7b870f-973a-4acb-a422-76991991f79b","name":"DirectSale8","directSaleType":"CO","endDate":"2020-02-02T12:50:30.9823958"},{"id":"27f8c871-808c-4584-915d-e4d7f99e34c5","name":"DirectSale9","directSaleType":"DS","endDate":"2020-02-03T12:50:30.9823991"},{"id":"df86dda3-8d59-45b7-86fb-371a073be221","name":"DirectSale10","directSaleType":"CO","endDate":"2020-02-04T12:50:30.9824035"},{"id":"fe67e082-1cfd-4fa9-830d-d65a5cc204e8","name":"DirectSale11","directSaleType":"DS","endDate":"2020-02-05T12:50:30.9824069"},{"id":"61ce694b-6eec-42ac-95e7-4d6d2e048942","name":"DS_FF","directSaleType":"directsale","endDate":"2020-01-26T08:48:16.531"},{"id":"bc4f444b-f4dd-4305-ab2b-a25c907a9db1","name":"DS_Validate","directSaleType":"directsale","endDate":"2020-01-26T09:24:50.215"}]
+Response headers: 
+Date:Sat, 22 Feb 2020 16:16:19 GMT
+Content-Type:application/json; charset=utf-8
+Server:Kestrel
+Content-Length:1681
+
+2020-02-22 16:16:25.407 +00:00 [INF] requestId: 0HLTNMA6HURMB:00000002, previousRequestId: no previous request id, message: EndpointRateLimiting is not enabled for /api/directsales
+2020-02-22 16:16:25.408 +00:00 [INF] requestId: 0HLTNMA6HURMB:00000002, previousRequestId: no previous request id, message: No authentication needed for /directsales
+2020-02-22 16:16:25.408 +00:00 [INF] requestId: 0HLTNMA6HURMB:00000002, previousRequestId: no previous request id, message: /api/directsales route does not require user to be authorised
+2020-02-22 16:16:25.431 +00:00 [INF] requestId: 0HLTNMA6HURMB:00000002, previousRequestId: no previous request id, message: 200 (OK) status code, request uri: http://localhost:5000/api/directsales
+2020-02-22 16:16:25.432 +00:00 [INF] Request: http localhost:9001/directsales  
+Request headers:
+Cache-Control:max-age=0
+Connection:keep-alive
+Accept:text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+Accept-Encoding:gzip, deflate, br
+Accept-Language:en-GB,en-US;q=0.9,en;q=0.8
+Cookie:_ga=GA1.1.745071743.1551113804
+Host:localhost:9001
+User-Agent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.106 Safari/537.36
+Upgrade-Insecure-Requests:1
+Sec-Fetch-Dest:document
+Sec-Fetch-Site:none
+Sec-Fetch-Mode:navigate
+Sec-Fetch-User:?1
+Response: 200: [{"id":"a4b8036c-ea25-4a56-a468-57629f0616cd","name":"DirectSale1","directSaleType":"DS","endDate":"2020-01-26T12:50:30.969139"},{"id":"cf1620d7-13b5-4150-90b0-4e305ff84db2","name":"DirectSale2","directSaleType":"CO","endDate":"2020-01-27T12:50:30.9823357"},{"id":"9a622c1c-94ae-4c17-b684-426d973fed39","name":"DirectSale3","directSaleType":"DS","endDate":"2020-01-28T12:50:30.9823602"},{"id":"f3fcf095-c425-4993-9ab0-4b2198afd372","name":"DirectSale4","directSaleType":"DS","endDate":"2020-01-29T12:50:30.9823645"},{"id":"9f605706-46b2-4332-be97-4a6a526a779f","name":"DirectSale5","directSaleType":"CO","endDate":"2020-01-30T12:50:30.9823889"},{"id":"6a83df25-4fa9-4fbd-9c9f-3d958321229f","name":"DirectSale6","directSaleType":"CO","endDate":"2020-01-31T12:50:30.9823924"},{"id":"959a3e08-0bdc-451e-a98e-dbbaa1462ade","name":"DirectSale7","directSaleType":"DS","endDate":"2020-02-01T12:50:30.9823938"},{"id":"fb7b870f-973a-4acb-a422-76991991f79b","name":"DirectSale8","directSaleType":"CO","endDate":"2020-02-02T12:50:30.9823958"},{"id":"27f8c871-808c-4584-915d-e4d7f99e34c5","name":"DirectSale9","directSaleType":"DS","endDate":"2020-02-03T12:50:30.9823991"},{"id":"df86dda3-8d59-45b7-86fb-371a073be221","name":"DirectSale10","directSaleType":"CO","endDate":"2020-02-04T12:50:30.9824035"},{"id":"fe67e082-1cfd-4fa9-830d-d65a5cc204e8","name":"DirectSale11","directSaleType":"DS","endDate":"2020-02-05T12:50:30.9824069"},{"id":"61ce694b-6eec-42ac-95e7-4d6d2e048942","name":"DS_FF","directSaleType":"directsale","endDate":"2020-01-26T08:48:16.531"},{"id":"bc4f444b-f4dd-4305-ab2b-a25c907a9db1","name":"DS_Validate","directSaleType":"directsale","endDate":"2020-01-26T09:24:50.215"}]
+Response headers: 
+Date:Sat, 22 Feb 2020 16:16:25 GMT
+Content-Type:application/json; charset=utf-8
+Server:Kestrel
+Content-Length:1681
+
+2020-02-22 16:34:10.652 +00:00 [WRN] requestId: 0HLTNMA6HURMD:00000001, previousRequestId: no previous request id, message: DownstreamRouteFinderMiddleware setting pipeline errors. IDownstreamRouteFinder returned Error Code: UnableToFindDownstreamRouteError Message: Failed to match ReRoute configuration for upstream path: /administration, verb: GET.
+2020-02-22 16:34:10.653 +00:00 [WRN] requestId: 0HLTNMA6HURMD:00000001, previousRequestId: no previous request id, message: Failed to match ReRoute configuration for upstream path: /administration, verb: GET.
+2020-02-22 16:34:10.654 +00:00 [WRN] requestId: 0HLTNMA6HURMD:00000001, previousRequestId: no previous request id, message: Error Code: UnableToFindDownstreamRouteError Message: Failed to match ReRoute configuration for upstream path: /administration, verb: GET. errors found in ResponderMiddleware. Setting error response for request path:/administration, request method: GET
+2020-02-22 16:34:10.655 +00:00 [INF] Request: http localhost:9001/administration  
+Request headers:
+Connection:keep-alive
+Accept:text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+Accept-Encoding:gzip, deflate, br
+Accept-Language:en-GB,en-US;q=0.9,en;q=0.8
+Cookie:_ga=GA1.1.745071743.1551113804
+Host:localhost:9001
+User-Agent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.106 Safari/537.36
+Upgrade-Insecure-Requests:1
+Sec-Fetch-Dest:document
+Sec-Fetch-Site:none
+Sec-Fetch-Mode:navigate
+Sec-Fetch-User:?1
+Response: 404: 
+Response headers: 
+
+2020-02-22 16:34:17.731 +00:00 [WRN] requestId: 0HLTNMA6HURMD:00000002, previousRequestId: no previous request id, message: DownstreamRouteFinderMiddleware setting pipeline errors. IDownstreamRouteFinder returned Error Code: UnableToFindDownstreamRouteError Message: Failed to match ReRoute configuration for upstream path: /, verb: GET.
+2020-02-22 16:34:17.733 +00:00 [WRN] requestId: 0HLTNMA6HURMD:00000002, previousRequestId: no previous request id, message: Failed to match ReRoute configuration for upstream path: /, verb: GET.
+2020-02-22 16:34:17.735 +00:00 [WRN] requestId: 0HLTNMA6HURMD:00000002, previousRequestId: no previous request id, message: Error Code: UnableToFindDownstreamRouteError Message: Failed to match ReRoute configuration for upstream path: /, verb: GET. errors found in ResponderMiddleware. Setting error response for request path:/, request method: GET
+2020-02-22 16:34:17.736 +00:00 [INF] Request: http localhost:9001/  
+Request headers:
+Connection:keep-alive
+Accept:text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+Accept-Encoding:gzip, deflate, br
+Accept-Language:en-GB,en-US;q=0.9,en;q=0.8
+Cookie:_ga=GA1.1.745071743.1551113804
+Host:localhost:9001
+User-Agent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.106 Safari/537.36
+Upgrade-Insecure-Requests:1
+Sec-Fetch-Dest:document
+Sec-Fetch-Site:none
+Sec-Fetch-Mode:navigate
+Sec-Fetch-User:?1
+Response: 404: 
+Response headers: 
+
+2020-02-22 18:07:48.081 +00:00 [INF] requestId: 0HLTNO8FQJGBT:00000001, previousRequestId: no previous request id, message: EndpointRateLimiting is not enabled for /api/directsales
+2020-02-22 18:07:48.165 +00:00 [INF] requestId: 0HLTNO8FQJGBT:00000001, previousRequestId: no previous request id, message: /directsales is an authenticated route. AuthenticationMiddleware checking if client is authenticated
+2020-02-22 18:07:48.363 +00:00 [WRN] requestId: 0HLTNO8FQJGBT:00000001, previousRequestId: no previous request id, message: Client has NOT been authenticated for /directsales and pipeline error set. Request for authenticated route /directsales by  was unauthenticated
+2020-02-22 18:07:48.363 +00:00 [WRN] requestId: 0HLTNO8FQJGBT:00000001, previousRequestId: no previous request id, message: Request for authenticated route /directsales by  was unauthenticated
+2020-02-22 18:07:48.366 +00:00 [WRN] requestId: 0HLTNO8FQJGBT:00000001, previousRequestId: no previous request id, message: Error Code: UnauthenticatedError Message: Request for authenticated route /directsales by  was unauthenticated errors found in ResponderMiddleware. Setting error response for request path:/directsales, request method: GET
+2020-02-22 18:07:48.370 +00:00 [INF] Request: http localhost:9001/directsales  
+Request headers:
+Cache-Control:max-age=0
+Connection:keep-alive
+Accept:text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+Accept-Encoding:gzip, deflate, br
+Accept-Language:en-GB,en-US;q=0.9,en;q=0.8
+Cookie:_ga=GA1.1.745071743.1551113804
+Host:localhost:9001
+User-Agent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.106 Safari/537.36
+Upgrade-Insecure-Requests:1
+Sec-Fetch-Dest:document
+Sec-Fetch-Site:none
+Sec-Fetch-Mode:navigate
+Sec-Fetch-User:?1
+Response: 401: 
+Response headers: 
+
+2020-02-22 18:07:53.069 +00:00 [INF] requestId: 0HLTNO8FQJGBT:00000002, previousRequestId: no previous request id, message: EndpointRateLimiting is not enabled for /api/directsales
+2020-02-22 18:07:53.070 +00:00 [INF] requestId: 0HLTNO8FQJGBT:00000002, previousRequestId: no previous request id, message: /directsales is an authenticated route. AuthenticationMiddleware checking if client is authenticated
+2020-02-22 18:07:53.071 +00:00 [WRN] requestId: 0HLTNO8FQJGBT:00000002, previousRequestId: no previous request id, message: Client has NOT been authenticated for /directsales and pipeline error set. Request for authenticated route /directsales by  was unauthenticated
+2020-02-22 18:07:53.071 +00:00 [WRN] requestId: 0HLTNO8FQJGBT:00000002, previousRequestId: no previous request id, message: Request for authenticated route /directsales by  was unauthenticated
+2020-02-22 18:07:53.071 +00:00 [WRN] requestId: 0HLTNO8FQJGBT:00000002, previousRequestId: no previous request id, message: Error Code: UnauthenticatedError Message: Request for authenticated route /directsales by  was unauthenticated errors found in ResponderMiddleware. Setting error response for request path:/directsales, request method: GET
+2020-02-22 18:07:53.071 +00:00 [INF] Request: http localhost:9001/directsales  
+Request headers:
+Cache-Control:max-age=0
+Connection:keep-alive
+Accept:text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+Accept-Encoding:gzip, deflate, br
+Accept-Language:en-GB,en-US;q=0.9,en;q=0.8
+Cookie:_ga=GA1.1.745071743.1551113804
+Host:localhost:9001
+User-Agent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.106 Safari/537.36
+Upgrade-Insecure-Requests:1
+Sec-Fetch-Dest:document
+Sec-Fetch-Site:cross-site
+Sec-Fetch-Mode:navigate
+Sec-Fetch-User:?1
+Response: 401: 
+Response headers: 
+
+2020-02-22 18:09:40.788 +00:00 [INF] requestId: 0HLTNO8FQJGBV:00000002, previousRequestId: no previous request id, message: EndpointRateLimiting is not enabled for /api/directsales/{id}
+2020-02-22 18:09:40.788 +00:00 [INF] requestId: 0HLTNO8FQJGBV:00000002, previousRequestId: no previous request id, message: No authentication needed for /directsales/a5bc92c4-2fb1-4930-b8fd-9b2eeececf5d
+2020-02-22 18:09:40.793 +00:00 [INF] requestId: 0HLTNO8FQJGBV:00000002, previousRequestId: no previous request id, message: /api/directsales/{id} route does not require user to be authorised
+2020-02-22 18:09:41.400 +00:00 [WRN] requestId: 0HLTNO8FQJGBV:00000002, previousRequestId: no previous request id, message: 404 (Not Found) status code, request uri: http://localhost:5000/api/directsales/a5bc92c4-2fb1-4930-b8fd-9b2eeececf5d
+2020-02-22 18:09:41.435 +00:00 [INF] Request: http localhost:9001/directsales/a5bc92c4-2fb1-4930-b8fd-9b2eeececf5d  
+Request headers:
+Connection:keep-alive
+Accept:application/json, text/plain, */*
+Accept-Encoding:gzip, deflate, br
+Accept-Language:en-GB,en-US;q=0.9,en;q=0.8
+Authorization:Bearer null
+Host:localhost:9001
+Referer:http://localhost:3000/directsales/a5bc92c4-2fb1-4930-b8fd-9b2eeececf5d
+User-Agent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.106 Safari/537.36
+Origin:http://localhost:3000
+Sec-Fetch-Dest:empty
+Sec-Fetch-Site:same-site
+Sec-Fetch-Mode:cors
+Response: 404: {"error":{"directsale":"Could not find directsale"}}
+Response headers: 
+Date:Sat, 22 Feb 2020 18:09:40 GMT
+Content-Type:application/json
+Server:Kestrel
+Access-Control-Allow-Credentials:true
+Access-Control-Allow-Origin:http://localhost:3000
+Access-Control-Expose-Headers:WWW-Authenticate
+Content-Length:52
+
+2020-02-22 18:16:56.499 +00:00 [INF] requestId: 0HLTNO8FQJGC0:00000002, previousRequestId: no previous request id, message: EndpointRateLimiting is not enabled for /api/directsales
+2020-02-22 18:16:56.500 +00:00 [INF] requestId: 0HLTNO8FQJGC0:00000002, previousRequestId: no previous request id, message: /directsales is an authenticated route. AuthenticationMiddleware checking if client is authenticated
+2020-02-22 18:16:56.694 +00:00 [WRN] requestId: 0HLTNO8FQJGC0:00000002, previousRequestId: no previous request id, message: Client has NOT been authenticated for /directsales and pipeline error set. Request for authenticated route /directsales by  was unauthenticated
+2020-02-22 18:16:56.695 +00:00 [WRN] requestId: 0HLTNO8FQJGC0:00000002, previousRequestId: no previous request id, message: Request for authenticated route /directsales by  was unauthenticated
+2020-02-22 18:16:56.696 +00:00 [WRN] requestId: 0HLTNO8FQJGC0:00000002, previousRequestId: no previous request id, message: Error Code: UnauthenticatedError Message: Request for authenticated route /directsales by  was unauthenticated errors found in ResponderMiddleware. Setting error response for request path:/directsales, request method: GET
+2020-02-22 18:16:56.697 +00:00 [INF] Request: http localhost:9001/directsales  
+Request headers:
+Connection:keep-alive
+Accept:application/json, text/plain, */*
+Accept-Encoding:gzip, deflate, br
+Accept-Language:en-GB,en-US;q=0.9,en;q=0.8
+Authorization:Bearer null
+Host:localhost:9001
+Referer:http://localhost:3000/DirectSales
+User-Agent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.106 Safari/537.36
+Origin:http://localhost:3000
+Sec-Fetch-Dest:empty
+Sec-Fetch-Site:same-site
+Sec-Fetch-Mode:cors
+Response: 401: 
+Response headers: 
+
+2020-02-22 18:17:43.302 +00:00 [INF] requestId: 0HLTNO8FQJGC0:00000004, previousRequestId: no previous request id, message: EndpointRateLimiting is not enabled for /api/user/login
+2020-02-22 18:17:43.303 +00:00 [INF] requestId: 0HLTNO8FQJGC0:00000004, previousRequestId: no previous request id, message: No authentication needed for /user/login
+2020-02-22 18:17:43.303 +00:00 [INF] requestId: 0HLTNO8FQJGC0:00000004, previousRequestId: no previous request id, message: /api/user/login route does not require user to be authorised
+2020-02-22 18:17:44.039 +00:00 [INF] requestId: 0HLTNO8FQJGC0:00000004, previousRequestId: no previous request id, message: 200 (OK) status code, request uri: http://localhost:5001/api/user/login
+2020-02-22 18:17:44.043 +00:00 [INF] Request: http localhost:9001/user/login  {"email":"imam@test.com","password":"Pa$$w0rd"}
+Request headers:
+Connection:keep-alive
+Content-Type:application/json;charset=UTF-8
+Accept:application/json, text/plain, */*
+Accept-Encoding:gzip, deflate, br
+Accept-Language:en-GB,en-US;q=0.9,en;q=0.8
+Authorization:Bearer null
+Host:localhost:9001
+Referer:http://localhost:3000/
+User-Agent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.106 Safari/537.36
+Origin:http://localhost:3000
+Content-Length:47
+Sec-Fetch-Dest:empty
+Sec-Fetch-Site:same-site
+Sec-Fetch-Mode:cors
+Response: 200: {"displayName":"Imam","token":"eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiJpbWFtIiwibmJmIjoxNTgyMzk1NDYzLCJleHAiOjE1ODMwMDAyNjMsImlhdCI6MTU4MjM5NTQ2M30.Z81yZyfUKyQzmDTwaE0EEyP0HQpSFCoD2rkmjAprTV2JDhf4wveC4bBI0WHc2g8-v3IUO2CnDrP1HfkRmzbmvA","username":"imam","image":null}
+Response headers: 
+Date:Sat, 22 Feb 2020 18:17:43 GMT
+Content-Type:application/json; charset=utf-8
+Server:Kestrel
+Access-Control-Allow-Credentials:true
+Access-Control-Allow-Origin:http://localhost:3000
+Access-Control-Expose-Headers:WWW-Authenticate
+Content-Length:279
+
+2020-02-22 18:17:45.266 +00:00 [INF] requestId: 0HLTNO8FQJGC0:00000006, previousRequestId: no previous request id, message: EndpointRateLimiting is not enabled for /api/directsales
+2020-02-22 18:17:45.267 +00:00 [INF] requestId: 0HLTNO8FQJGC0:00000006, previousRequestId: no previous request id, message: /directsales is an authenticated route. AuthenticationMiddleware checking if client is authenticated
+2020-02-22 18:17:45.718 +00:00 [INF] requestId: 0HLTNO8FQJGC0:00000006, previousRequestId: no previous request id, message: Client has been authenticated for /directsales
+2020-02-22 18:17:45.719 +00:00 [INF] requestId: 0HLTNO8FQJGC0:00000006, previousRequestId: no previous request id, message: route is authenticated scopes must be checked
+2020-02-22 18:17:45.721 +00:00 [INF] requestId: 0HLTNO8FQJGC0:00000006, previousRequestId: no previous request id, message: user scopes is authorised calling next authorisation checks
+2020-02-22 18:17:45.721 +00:00 [INF] requestId: 0HLTNO8FQJGC0:00000006, previousRequestId: no previous request id, message: /api/directsales route does not require user to be authorised
+2020-02-22 18:17:45.775 +00:00 [INF] requestId: 0HLTNO8FQJGC0:00000006, previousRequestId: no previous request id, message: 200 (OK) status code, request uri: http://localhost:5000/api/directsales
+2020-02-22 18:17:45.778 +00:00 [INF] Request: http localhost:9001/directsales  
+Request headers:
+Connection:keep-alive
+Accept:application/json, text/plain, */*
+Accept-Encoding:gzip, deflate, br
+Accept-Language:en-GB,en-US;q=0.9,en;q=0.8
+Authorization:Bearer eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiJpbWFtIiwibmJmIjoxNTgyMzk1NDYzLCJleHAiOjE1ODMwMDAyNjMsImlhdCI6MTU4MjM5NTQ2M30.Z81yZyfUKyQzmDTwaE0EEyP0HQpSFCoD2rkmjAprTV2JDhf4wveC4bBI0WHc2g8-v3IUO2CnDrP1HfkRmzbmvA
+Host:localhost:9001
+Referer:http://localhost:3000/directsales
+User-Agent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.106 Safari/537.36
+Origin:http://localhost:3000
+Sec-Fetch-Dest:empty
+Sec-Fetch-Site:same-site
+Sec-Fetch-Mode:cors
+Response: 200: [{"id":"a4b8036c-ea25-4a56-a468-57629f0616cd","name":"DirectSale1","directSaleType":"DS","endDate":"2020-01-26T12:50:30.969139"},{"id":"cf1620d7-13b5-4150-90b0-4e305ff84db2","name":"DirectSale2","directSaleType":"CO","endDate":"2020-01-27T12:50:30.9823357"},{"id":"9a622c1c-94ae-4c17-b684-426d973fed39","name":"DirectSale3","directSaleType":"DS","endDate":"2020-01-28T12:50:30.9823602"},{"id":"f3fcf095-c425-4993-9ab0-4b2198afd372","name":"DirectSale4","directSaleType":"DS","endDate":"2020-01-29T12:50:30.9823645"},{"id":"9f605706-46b2-4332-be97-4a6a526a779f","name":"DirectSale5","directSaleType":"CO","endDate":"2020-01-30T12:50:30.9823889"},{"id":"6a83df25-4fa9-4fbd-9c9f-3d958321229f","name":"DirectSale6","directSaleType":"CO","endDate":"2020-01-31T12:50:30.9823924"},{"id":"959a3e08-0bdc-451e-a98e-dbbaa1462ade","name":"DirectSale7","directSaleType":"DS","endDate":"2020-02-01T12:50:30.9823938"},{"id":"fb7b870f-973a-4acb-a422-76991991f79b","name":"DirectSale8","directSaleType":"CO","endDate":"2020-02-02T12:50:30.9823958"},{"id":"27f8c871-808c-4584-915d-e4d7f99e34c5","name":"DirectSale9","directSaleType":"DS","endDate":"2020-02-03T12:50:30.9823991"},{"id":"df86dda3-8d59-45b7-86fb-371a073be221","name":"DirectSale10","directSaleType":"CO","endDate":"2020-02-04T12:50:30.9824035"},{"id":"fe67e082-1cfd-4fa9-830d-d65a5cc204e8","name":"DirectSale11","directSaleType":"DS","endDate":"2020-02-05T12:50:30.9824069"},{"id":"61ce694b-6eec-42ac-95e7-4d6d2e048942","name":"DS_FF","directSaleType":"directsale","endDate":"2020-01-26T08:48:16.531"},{"id":"bc4f444b-f4dd-4305-ab2b-a25c907a9db1","name":"DS_Validate","directSaleType":"directsale","endDate":"2020-01-26T09:24:50.215"}]
+Response headers: 
+Date:Sat, 22 Feb 2020 18:17:45 GMT
+Content-Type:application/json; charset=utf-8
+Server:Kestrel
+Access-Control-Allow-Credentials:true
+Access-Control-Allow-Origin:http://localhost:3000
+Access-Control-Expose-Headers:WWW-Authenticate
+Content-Length:1681
+
+2020-02-22 18:18:25.928 +00:00 [INF] requestId: 0HLTNO8FQJGC1:00000001, previousRequestId: no previous request id, message: EndpointRateLimiting is not enabled for /api/directsales
+2020-02-22 18:18:25.929 +00:00 [INF] requestId: 0HLTNO8FQJGC1:00000001, previousRequestId: no previous request id, message: /directsales is an authenticated route. AuthenticationMiddleware checking if client is authenticated
+2020-02-22 18:18:25.929 +00:00 [WRN] requestId: 0HLTNO8FQJGC1:00000001, previousRequestId: no previous request id, message: Client has NOT been authenticated for /directsales and pipeline error set. Request for authenticated route /directsales by  was unauthenticated
+2020-02-22 18:18:25.929 +00:00 [WRN] requestId: 0HLTNO8FQJGC1:00000001, previousRequestId: no previous request id, message: Request for authenticated route /directsales by  was unauthenticated
+2020-02-22 18:18:25.929 +00:00 [WRN] requestId: 0HLTNO8FQJGC1:00000001, previousRequestId: no previous request id, message: Error Code: UnauthenticatedError Message: Request for authenticated route /directsales by  was unauthenticated errors found in ResponderMiddleware. Setting error response for request path:/directsales, request method: GET
+2020-02-22 18:18:25.930 +00:00 [INF] Request: http localhost:9001/directsales  
+Request headers:
+Cache-Control:max-age=0
+Connection:keep-alive
+Accept:text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+Accept-Encoding:gzip, deflate, br
+Accept-Language:en-GB,en-US;q=0.9,en;q=0.8
+Cookie:_ga=GA1.1.745071743.1551113804
+Host:localhost:9001
+User-Agent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.106 Safari/537.36
+Upgrade-Insecure-Requests:1
+Sec-Fetch-Dest:document
+Sec-Fetch-Site:none
+Sec-Fetch-Mode:navigate
+Sec-Fetch-User:?1
+Response: 401: 
+Response headers: 
+
+2020-02-22 18:18:33.729 +00:00 [INF] requestId: 0HLTNO8FQJGC1:00000002, previousRequestId: no previous request id, message: EndpointRateLimiting is not enabled for /api/directsales
+2020-02-22 18:18:33.730 +00:00 [INF] requestId: 0HLTNO8FQJGC1:00000002, previousRequestId: no previous request id, message: /directsales is an authenticated route. AuthenticationMiddleware checking if client is authenticated
+2020-02-22 18:18:33.731 +00:00 [WRN] requestId: 0HLTNO8FQJGC1:00000002, previousRequestId: no previous request id, message: Client has NOT been authenticated for /directsales and pipeline error set. Request for authenticated route /directsales by  was unauthenticated
+2020-02-22 18:18:33.732 +00:00 [WRN] requestId: 0HLTNO8FQJGC1:00000002, previousRequestId: no previous request id, message: Request for authenticated route /directsales by  was unauthenticated
+2020-02-22 18:18:33.732 +00:00 [WRN] requestId: 0HLTNO8FQJGC1:00000002, previousRequestId: no previous request id, message: Error Code: UnauthenticatedError Message: Request for authenticated route /directsales by  was unauthenticated errors found in ResponderMiddleware. Setting error response for request path:/directsales, request method: GET
+2020-02-22 18:18:33.733 +00:00 [INF] Request: http localhost:9001/directsales  
+Request headers:
+Cache-Control:max-age=0
+Connection:keep-alive
+Accept:text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+Accept-Encoding:gzip, deflate, br
+Accept-Language:en-GB,en-US;q=0.9,en;q=0.8
+Cookie:_ga=GA1.1.745071743.1551113804
+Host:localhost:9001
+User-Agent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.106 Safari/537.36
+Upgrade-Insecure-Requests:1
+Sec-Fetch-Dest:document
+Sec-Fetch-Site:cross-site
+Sec-Fetch-Mode:navigate
+Sec-Fetch-User:?1
+Response: 401: 
+Response headers: 
+
+2020-02-22 18:18:57.003 +00:00 [WRN] requestId: 0HLTNO8FQJGC1:00000003, previousRequestId: no previous request id, message: DownstreamRouteFinderMiddleware setting pipeline errors. IDownstreamRouteFinder returned Error Code: UnableToFindDownstreamRouteError Message: Failed to match ReRoute configuration for upstream path: /api/directsales, verb: GET.
+2020-02-22 18:18:57.004 +00:00 [WRN] requestId: 0HLTNO8FQJGC1:00000003, previousRequestId: no previous request id, message: Failed to match ReRoute configuration for upstream path: /api/directsales, verb: GET.
+2020-02-22 18:18:57.005 +00:00 [WRN] requestId: 0HLTNO8FQJGC1:00000003, previousRequestId: no previous request id, message: Error Code: UnableToFindDownstreamRouteError Message: Failed to match ReRoute configuration for upstream path: /api/directsales, verb: GET. errors found in ResponderMiddleware. Setting error response for request path:/api/directsales, request method: GET
+2020-02-22 18:18:57.005 +00:00 [INF] Request: http localhost:9001/api/directsales  
+Request headers:
+Connection:keep-alive
+Accept:text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+Accept-Encoding:gzip, deflate, br
+Accept-Language:en-GB,en-US;q=0.9,en;q=0.8
+Cookie:_ga=GA1.1.745071743.1551113804
+Host:localhost:9001
+User-Agent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.106 Safari/537.36
+Upgrade-Insecure-Requests:1
+Sec-Fetch-Dest:document
+Sec-Fetch-Site:none
+Sec-Fetch-Mode:navigate
+Sec-Fetch-User:?1
+Response: 404: 
+Response headers: 
+
+2020-02-22 18:21:52.011 +00:00 [INF] requestId: 0HLTNO8FQJGC4:00000002, previousRequestId: no previous request id, message: EndpointRateLimiting is not enabled for /api/directsales
+2020-02-22 18:21:52.012 +00:00 [INF] requestId: 0HLTNO8FQJGC4:00000002, previousRequestId: no previous request id, message: /directsales is an authenticated route. AuthenticationMiddleware checking if client is authenticated
+2020-02-22 18:21:52.014 +00:00 [INF] requestId: 0HLTNO8FQJGC4:00000002, previousRequestId: no previous request id, message: Client has been authenticated for /directsales
+2020-02-22 18:21:52.014 +00:00 [INF] requestId: 0HLTNO8FQJGC4:00000002, previousRequestId: no previous request id, message: route is authenticated scopes must be checked
+2020-02-22 18:21:52.014 +00:00 [INF] requestId: 0HLTNO8FQJGC4:00000002, previousRequestId: no previous request id, message: user scopes is authorised calling next authorisation checks
+2020-02-22 18:21:52.015 +00:00 [INF] requestId: 0HLTNO8FQJGC4:00000002, previousRequestId: no previous request id, message: /api/directsales route does not require user to be authorised
+2020-02-22 18:21:56.081 +00:00 [WRN] requestId: 0HLTNO8FQJGC4:00000002, previousRequestId: no previous request id, message: Error making http request, exception: System.Net.Http.HttpRequestException: No connection could be made because the target machine actively refused it.
+ ---> System.Net.Sockets.SocketException (10061): No connection could be made because the target machine actively refused it.
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean allowHttp2, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.GetHttpConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithRetryAsync(HttpRequestMessage request, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.FinishSendAsyncBuffered(Task`1 sendTask, HttpRequestMessage request, CancellationTokenSource cts, Boolean disposeCts)
+   at Ocelot.Requester.HttpClientHttpRequester.GetResponse(DownstreamContext context)
+2020-02-22 18:21:56.081 +00:00 [WRN] requestId: 0HLTNO8FQJGC4:00000002, previousRequestId: no previous request id, message: Error Code: UnableToCompleteRequestError Message: Error making http request, exception: System.Net.Http.HttpRequestException: No connection could be made because the target machine actively refused it.
+ ---> System.Net.Sockets.SocketException (10061): No connection could be made because the target machine actively refused it.
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean allowHttp2, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.GetHttpConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithRetryAsync(HttpRequestMessage request, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.FinishSendAsyncBuffered(Task`1 sendTask, HttpRequestMessage request, CancellationTokenSource cts, Boolean disposeCts)
+   at Ocelot.Requester.HttpClientHttpRequester.GetResponse(DownstreamContext context) errors found in ResponderMiddleware. Setting error response for request path:/directsales, request method: GET
+2020-02-22 18:21:56.082 +00:00 [INF] Request: http localhost:9001/directsales  
+Request headers:
+Connection:keep-alive
+Accept:application/json, text/plain, */*
+Accept-Encoding:gzip, deflate, br
+Accept-Language:en-GB,en-US;q=0.9,en;q=0.8
+Authorization:Bearer eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiJpbWFtIiwibmJmIjoxNTgyMzk1NDYzLCJleHAiOjE1ODMwMDAyNjMsImlhdCI6MTU4MjM5NTQ2M30.Z81yZyfUKyQzmDTwaE0EEyP0HQpSFCoD2rkmjAprTV2JDhf4wveC4bBI0WHc2g8-v3IUO2CnDrP1HfkRmzbmvA
+Host:localhost:9001
+Referer:http://localhost:3000/directsales
+User-Agent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.106 Safari/537.36
+Origin:http://localhost:3000
+Sec-Fetch-Dest:empty
+Sec-Fetch-Site:same-site
+Sec-Fetch-Mode:cors
+Response: 500: 
+Response headers: 
+
+2020-02-22 18:25:20.590 +00:00 [INF] requestId: 0HLTNO8FQJGC5:00000002, previousRequestId: no previous request id, message: EndpointRateLimiting is not enabled for /api/directsales
+2020-02-22 18:25:20.603 +00:00 [INF] requestId: 0HLTNO8FQJGC5:00000002, previousRequestId: no previous request id, message: /directsales is an authenticated route. AuthenticationMiddleware checking if client is authenticated
+2020-02-22 18:25:20.607 +00:00 [INF] requestId: 0HLTNO8FQJGC5:00000002, previousRequestId: no previous request id, message: Client has been authenticated for /directsales
+2020-02-22 18:25:20.608 +00:00 [INF] requestId: 0HLTNO8FQJGC5:00000002, previousRequestId: no previous request id, message: route is authenticated scopes must be checked
+2020-02-22 18:25:20.609 +00:00 [INF] requestId: 0HLTNO8FQJGC5:00000002, previousRequestId: no previous request id, message: user scopes is authorised calling next authorisation checks
+2020-02-22 18:25:20.609 +00:00 [INF] requestId: 0HLTNO8FQJGC5:00000002, previousRequestId: no previous request id, message: /api/directsales route does not require user to be authorised
+2020-02-22 18:25:21.668 +00:00 [INF] requestId: 0HLTNO8FQJGC5:00000002, previousRequestId: no previous request id, message: 200 (OK) status code, request uri: http://localhost:5000/api/directsales
+2020-02-22 18:25:21.670 +00:00 [INF] Request: http localhost:9001/directsales  
+Request headers:
+Connection:keep-alive
+Accept:application/json, text/plain, */*
+Accept-Encoding:gzip, deflate, br
+Accept-Language:en-GB,en-US;q=0.9,en;q=0.8
+Authorization:Bearer eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiJpbWFtIiwibmJmIjoxNTgyMzk1NDYzLCJleHAiOjE1ODMwMDAyNjMsImlhdCI6MTU4MjM5NTQ2M30.Z81yZyfUKyQzmDTwaE0EEyP0HQpSFCoD2rkmjAprTV2JDhf4wveC4bBI0WHc2g8-v3IUO2CnDrP1HfkRmzbmvA
+Host:localhost:9001
+Referer:http://localhost:3000/directsales
+User-Agent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.106 Safari/537.36
+Origin:http://localhost:3000
+Sec-Fetch-Dest:empty
+Sec-Fetch-Site:same-site
+Sec-Fetch-Mode:cors
+Response: 200: [{"id":"a4b8036c-ea25-4a56-a468-57629f0616cd","name":"DirectSale1","directSaleType":"DS","endDate":"2020-01-26T12:50:30.969139"},{"id":"cf1620d7-13b5-4150-90b0-4e305ff84db2","name":"DirectSale2","directSaleType":"CO","endDate":"2020-01-27T12:50:30.9823357"},{"id":"9a622c1c-94ae-4c17-b684-426d973fed39","name":"DirectSale3","directSaleType":"DS","endDate":"2020-01-28T12:50:30.9823602"},{"id":"f3fcf095-c425-4993-9ab0-4b2198afd372","name":"DirectSale4","directSaleType":"DS","endDate":"2020-01-29T12:50:30.9823645"},{"id":"9f605706-46b2-4332-be97-4a6a526a779f","name":"DirectSale5","directSaleType":"CO","endDate":"2020-01-30T12:50:30.9823889"},{"id":"6a83df25-4fa9-4fbd-9c9f-3d958321229f","name":"DirectSale6","directSaleType":"CO","endDate":"2020-01-31T12:50:30.9823924"},{"id":"959a3e08-0bdc-451e-a98e-dbbaa1462ade","name":"DirectSale7","directSaleType":"DS","endDate":"2020-02-01T12:50:30.9823938"},{"id":"fb7b870f-973a-4acb-a422-76991991f79b","name":"DirectSale8","directSaleType":"CO","endDate":"2020-02-02T12:50:30.9823958"},{"id":"27f8c871-808c-4584-915d-e4d7f99e34c5","name":"DirectSale9","directSaleType":"DS","endDate":"2020-02-03T12:50:30.9823991"},{"id":"df86dda3-8d59-45b7-86fb-371a073be221","name":"DirectSale10","directSaleType":"CO","endDate":"2020-02-04T12:50:30.9824035"},{"id":"fe67e082-1cfd-4fa9-830d-d65a5cc204e8","name":"DirectSale11","directSaleType":"DS","endDate":"2020-02-05T12:50:30.9824069"},{"id":"61ce694b-6eec-42ac-95e7-4d6d2e048942","name":"DS_FF","directSaleType":"directsale","endDate":"2020-01-26T08:48:16.531"},{"id":"bc4f444b-f4dd-4305-ab2b-a25c907a9db1","name":"DS_Validate","directSaleType":"directsale","endDate":"2020-01-26T09:24:50.215"}]
+Response headers: 
+Date:Sat, 22 Feb 2020 18:25:21 GMT
+Content-Type:application/json; charset=utf-8
+Server:Kestrel
+Access-Control-Allow-Credentials:true
+Access-Control-Allow-Origin:http://localhost:3000
+Access-Control-Expose-Headers:WWW-Authenticate
+Content-Length:1681
+
+2020-02-22 18:46:59.302 +00:00 [INF] requestId: 0HLTNO8FQJGC6:00000001, previousRequestId: no previous request id, message: EndpointRateLimiting is not enabled for /api/directsales
+2020-02-22 18:46:59.303 +00:00 [INF] requestId: 0HLTNO8FQJGC6:00000001, previousRequestId: no previous request id, message: /directsales is an authenticated route. AuthenticationMiddleware checking if client is authenticated
+2020-02-22 18:46:59.303 +00:00 [WRN] requestId: 0HLTNO8FQJGC6:00000001, previousRequestId: no previous request id, message: Client has NOT been authenticated for /directsales and pipeline error set. Request for authenticated route /directsales by  was unauthenticated
+2020-02-22 18:46:59.303 +00:00 [WRN] requestId: 0HLTNO8FQJGC6:00000001, previousRequestId: no previous request id, message: Request for authenticated route /directsales by  was unauthenticated
+2020-02-22 18:46:59.303 +00:00 [WRN] requestId: 0HLTNO8FQJGC6:00000001, previousRequestId: no previous request id, message: Error Code: UnauthenticatedError Message: Request for authenticated route /directsales by  was unauthenticated errors found in ResponderMiddleware. Setting error response for request path:/directsales, request method: GET
+2020-02-22 18:46:59.304 +00:00 [INF] Request: http localhost:9001/directsales  
+Request headers:
+Connection:keep-alive
+Accept:text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+Accept-Encoding:gzip, deflate, br
+Accept-Language:en-GB,en-US;q=0.9,en;q=0.8
+Cookie:_ga=GA1.1.745071743.1551113804
+Host:localhost:9001
+User-Agent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.106 Safari/537.36
+Upgrade-Insecure-Requests:1
+Sec-Fetch-Dest:document
+Sec-Fetch-Site:none
+Sec-Fetch-Mode:navigate
+Sec-Fetch-User:?1
+Response: 401: 
+Response headers: 
+
+2020-02-22 18:47:07.599 +00:00 [INF] requestId: 0HLTNO8FQJGC6:00000002, previousRequestId: no previous request id, message: EndpointRateLimiting is not enabled for /api/directsales/{id}
+2020-02-22 18:47:07.599 +00:00 [INF] requestId: 0HLTNO8FQJGC6:00000002, previousRequestId: no previous request id, message: No authentication needed for /directsales/a4b8036c-ea25-4a56-a468-57629f0616cd
+2020-02-22 18:47:07.599 +00:00 [INF] requestId: 0HLTNO8FQJGC6:00000002, previousRequestId: no previous request id, message: /api/directsales/{id} route does not require user to be authorised
+2020-02-22 18:47:07.648 +00:00 [INF] requestId: 0HLTNO8FQJGC6:00000002, previousRequestId: no previous request id, message: 200 (OK) status code, request uri: http://localhost:5000/api/directsales/a4b8036c-ea25-4a56-a468-57629f0616cd
+2020-02-22 18:47:07.650 +00:00 [INF] Request: http localhost:9001/directsales/a4b8036c-ea25-4a56-a468-57629f0616cd  
+Request headers:
+Connection:keep-alive
+Accept:text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+Accept-Encoding:gzip, deflate, br
+Accept-Language:en-GB,en-US;q=0.9,en;q=0.8
+Cookie:_ga=GA1.1.745071743.1551113804
+Host:localhost:9001
+User-Agent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.106 Safari/537.36
+Upgrade-Insecure-Requests:1
+Sec-Fetch-Dest:document
+Sec-Fetch-Site:none
+Sec-Fetch-Mode:navigate
+Response: 200: {"id":"a4b8036c-ea25-4a56-a468-57629f0616cd","name":"DirectSale1","directSaleType":"DS","endDate":"2020-01-26T12:50:30.969139"}
+Response headers: 
+Date:Sat, 22 Feb 2020 18:47:07 GMT
+Content-Type:application/json; charset=utf-8
+Server:Kestrel
+Content-Length:127
+
+2020-02-22 18:49:54.113 +00:00 [INF] requestId: 0HLTNO8FQJGC8:00000001, previousRequestId: no previous request id, message: EndpointRateLimiting is not enabled for /api/directsales/{urlPath}
+2020-02-22 18:49:54.114 +00:00 [INF] requestId: 0HLTNO8FQJGC8:00000001, previousRequestId: no previous request id, message: /directsales/a4b8036c-ea25-4a56-a468-57629f0616cd is an authenticated route. AuthenticationMiddleware checking if client is authenticated
+2020-02-22 18:49:54.114 +00:00 [WRN] requestId: 0HLTNO8FQJGC8:00000001, previousRequestId: no previous request id, message: Client has NOT been authenticated for /directsales/a4b8036c-ea25-4a56-a468-57629f0616cd and pipeline error set. Request for authenticated route /directsales/a4b8036c-ea25-4a56-a468-57629f0616cd by  was unauthenticated
+2020-02-22 18:49:54.115 +00:00 [WRN] requestId: 0HLTNO8FQJGC8:00000001, previousRequestId: no previous request id, message: Request for authenticated route /directsales/a4b8036c-ea25-4a56-a468-57629f0616cd by  was unauthenticated
+2020-02-22 18:49:54.115 +00:00 [WRN] requestId: 0HLTNO8FQJGC8:00000001, previousRequestId: no previous request id, message: Error Code: UnauthenticatedError Message: Request for authenticated route /directsales/a4b8036c-ea25-4a56-a468-57629f0616cd by  was unauthenticated errors found in ResponderMiddleware. Setting error response for request path:/directsales/a4b8036c-ea25-4a56-a468-57629f0616cd, request method: GET
+2020-02-22 18:49:54.115 +00:00 [INF] Request: http localhost:9001/directsales/a4b8036c-ea25-4a56-a468-57629f0616cd  
+Request headers:
+Cache-Control:max-age=0
+Connection:keep-alive
+Accept:text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+Accept-Encoding:gzip, deflate, br
+Accept-Language:en-GB,en-US;q=0.9,en;q=0.8
+Cookie:_ga=GA1.1.745071743.1551113804
+Host:localhost:9001
+User-Agent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.106 Safari/537.36
+Upgrade-Insecure-Requests:1
+Sec-Fetch-Dest:document
+Sec-Fetch-Site:none
+Sec-Fetch-Mode:navigate
+Sec-Fetch-User:?1
+Response: 401: 
+Response headers: 
+
+2020-02-22 18:50:02.692 +00:00 [WRN] requestId: 0HLTNO8FQJGC8:00000002, previousRequestId: no previous request id, message: DownstreamRouteFinderMiddleware setting pipeline errors. IDownstreamRouteFinder returned Error Code: UnableToFindDownstreamRouteError Message: Failed to match ReRoute configuration for upstream path: /directsales/, verb: GET.
+2020-02-22 18:50:02.692 +00:00 [WRN] requestId: 0HLTNO8FQJGC8:00000002, previousRequestId: no previous request id, message: Failed to match ReRoute configuration for upstream path: /directsales/, verb: GET.
+2020-02-22 18:50:02.693 +00:00 [WRN] requestId: 0HLTNO8FQJGC8:00000002, previousRequestId: no previous request id, message: Error Code: UnableToFindDownstreamRouteError Message: Failed to match ReRoute configuration for upstream path: /directsales/, verb: GET. errors found in ResponderMiddleware. Setting error response for request path:/directsales/, request method: GET
+2020-02-22 18:50:02.693 +00:00 [INF] Request: http localhost:9001/directsales/  
+Request headers:
+Connection:keep-alive
+Accept:text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+Accept-Encoding:gzip, deflate, br
+Accept-Language:en-GB,en-US;q=0.9,en;q=0.8
+Cookie:_ga=GA1.1.745071743.1551113804
+Host:localhost:9001
+User-Agent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.106 Safari/537.36
+Upgrade-Insecure-Requests:1
+Sec-Fetch-Dest:document
+Sec-Fetch-Site:none
+Sec-Fetch-Mode:navigate
+Sec-Fetch-User:?1
+Response: 404: 
+Response headers: 
+
+2020-02-22 18:50:18.397 +00:00 [INF] requestId: 0HLTNO8FQJGCA:00000002, previousRequestId: no previous request id, message: EndpointRateLimiting is not enabled for /api/user/login
+2020-02-22 18:50:18.398 +00:00 [INF] requestId: 0HLTNO8FQJGCA:00000002, previousRequestId: no previous request id, message: No authentication needed for /user/login
+2020-02-22 18:50:18.398 +00:00 [INF] requestId: 0HLTNO8FQJGCA:00000002, previousRequestId: no previous request id, message: /api/user/login route does not require user to be authorised
+2020-02-22 18:50:18.649 +00:00 [INF] requestId: 0HLTNO8FQJGCA:00000002, previousRequestId: no previous request id, message: 200 (OK) status code, request uri: http://localhost:5001/api/user/login
+2020-02-22 18:50:18.650 +00:00 [INF] Request: http localhost:9001/user/login  {"email":"imam@test.com","password":"Pa$$w0rd"}
+Request headers:
+Connection:keep-alive
+Content-Type:application/json;charset=UTF-8
+Accept:application/json, text/plain, */*
+Accept-Encoding:gzip, deflate, br
+Accept-Language:en-GB,en-US;q=0.9,en;q=0.8
+Authorization:Bearer eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiJpbWFtIiwibmJmIjoxNTgyMzk1NDYzLCJleHAiOjE1ODMwMDAyNjMsImlhdCI6MTU4MjM5NTQ2M30.Z81yZyfUKyQzmDTwaE0EEyP0HQpSFCoD2rkmjAprTV2JDhf4wveC4bBI0WHc2g8-v3IUO2CnDrP1HfkRmzbmvA
+Host:localhost:9001
+Referer:http://localhost:3000/
+User-Agent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.106 Safari/537.36
+Origin:http://localhost:3000
+Content-Length:47
+Sec-Fetch-Dest:empty
+Sec-Fetch-Site:same-site
+Sec-Fetch-Mode:cors
+Response: 200: {"displayName":"Imam","token":"eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiJpbWFtIiwibmJmIjoxNTgyMzk3NDE4LCJleHAiOjE1ODMwMDIyMTgsImlhdCI6MTU4MjM5NzQxOH0.yVqBxjyGmm1iztcX1BAsGi-6MR6b8hPl5UezQOzVJjro9DT-Fef3d527hC0IA_qaKAQuZU3vPFJ-K1_K3kIvyQ","username":"imam","image":null}
+Response headers: 
+Date:Sat, 22 Feb 2020 18:50:17 GMT
+Content-Type:application/json; charset=utf-8
+Server:Kestrel
+Access-Control-Allow-Credentials:true
+Access-Control-Allow-Origin:http://localhost:3000
+Access-Control-Expose-Headers:WWW-Authenticate
+Content-Length:279
+
+2020-02-22 18:50:19.779 +00:00 [WRN] requestId: 0HLTNO8FQJGCA:00000004, previousRequestId: no previous request id, message: DownstreamRouteFinderMiddleware setting pipeline errors. IDownstreamRouteFinder returned Error Code: UnableToFindDownstreamRouteError Message: Failed to match ReRoute configuration for upstream path: /directsales, verb: GET.
+2020-02-22 18:50:19.780 +00:00 [WRN] requestId: 0HLTNO8FQJGCA:00000004, previousRequestId: no previous request id, message: Failed to match ReRoute configuration for upstream path: /directsales, verb: GET.
+2020-02-22 18:50:19.780 +00:00 [WRN] requestId: 0HLTNO8FQJGCA:00000004, previousRequestId: no previous request id, message: Error Code: UnableToFindDownstreamRouteError Message: Failed to match ReRoute configuration for upstream path: /directsales, verb: GET. errors found in ResponderMiddleware. Setting error response for request path:/directsales, request method: GET
+2020-02-22 18:50:19.782 +00:00 [INF] Request: http localhost:9001/directsales  
+Request headers:
+Connection:keep-alive
+Accept:application/json, text/plain, */*
+Accept-Encoding:gzip, deflate, br
+Accept-Language:en-GB,en-US;q=0.9,en;q=0.8
+Authorization:Bearer eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiJpbWFtIiwibmJmIjoxNTgyMzk3NDE4LCJleHAiOjE1ODMwMDIyMTgsImlhdCI6MTU4MjM5NzQxOH0.yVqBxjyGmm1iztcX1BAsGi-6MR6b8hPl5UezQOzVJjro9DT-Fef3d527hC0IA_qaKAQuZU3vPFJ-K1_K3kIvyQ
+Host:localhost:9001
+Referer:http://localhost:3000/directsales
+User-Agent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.106 Safari/537.36
+Origin:http://localhost:3000
+Sec-Fetch-Dest:empty
+Sec-Fetch-Site:same-site
+Sec-Fetch-Mode:cors
+Response: 404: 
+Response headers: 
+
+2020-02-22 18:50:25.801 +00:00 [WRN] requestId: 0HLTNO8FQJGCA:00000006, previousRequestId: no previous request id, message: DownstreamRouteFinderMiddleware setting pipeline errors. IDownstreamRouteFinder returned Error Code: UnableToFindDownstreamRouteError Message: Failed to match ReRoute configuration for upstream path: /directsales, verb: GET.
+2020-02-22 18:50:25.801 +00:00 [WRN] requestId: 0HLTNO8FQJGCA:00000006, previousRequestId: no previous request id, message: Failed to match ReRoute configuration for upstream path: /directsales, verb: GET.
+2020-02-22 18:50:25.801 +00:00 [WRN] requestId: 0HLTNO8FQJGCA:00000006, previousRequestId: no previous request id, message: Error Code: UnableToFindDownstreamRouteError Message: Failed to match ReRoute configuration for upstream path: /directsales, verb: GET. errors found in ResponderMiddleware. Setting error response for request path:/directsales, request method: GET
+2020-02-22 18:50:25.802 +00:00 [INF] Request: http localhost:9001/directsales  
+Request headers:
+Connection:keep-alive
+Accept:application/json, text/plain, */*
+Accept-Encoding:gzip, deflate, br
+Accept-Language:en-GB,en-US;q=0.9,en;q=0.8
+Authorization:Bearer eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiJpbWFtIiwibmJmIjoxNTgyMzk3NDE4LCJleHAiOjE1ODMwMDIyMTgsImlhdCI6MTU4MjM5NzQxOH0.yVqBxjyGmm1iztcX1BAsGi-6MR6b8hPl5UezQOzVJjro9DT-Fef3d527hC0IA_qaKAQuZU3vPFJ-K1_K3kIvyQ
+Host:localhost:9001
+Referer:http://localhost:3000/directsales
+User-Agent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.106 Safari/537.36
+Origin:http://localhost:3000
+Sec-Fetch-Dest:empty
+Sec-Fetch-Site:same-site
+Sec-Fetch-Mode:cors
+Response: 404: 
+Response headers: 
+
+2020-02-22 18:50:27.769 +00:00 [WRN] requestId: 0HLTNO8FQJGCA:00000007, previousRequestId: no previous request id, message: DownstreamRouteFinderMiddleware setting pipeline errors. IDownstreamRouteFinder returned Error Code: UnableToFindDownstreamRouteError Message: Failed to match ReRoute configuration for upstream path: /directsales, verb: GET.
+2020-02-22 18:50:27.769 +00:00 [WRN] requestId: 0HLTNO8FQJGCA:00000007, previousRequestId: no previous request id, message: Failed to match ReRoute configuration for upstream path: /directsales, verb: GET.
+2020-02-22 18:50:27.769 +00:00 [WRN] requestId: 0HLTNO8FQJGCA:00000007, previousRequestId: no previous request id, message: Error Code: UnableToFindDownstreamRouteError Message: Failed to match ReRoute configuration for upstream path: /directsales, verb: GET. errors found in ResponderMiddleware. Setting error response for request path:/directsales, request method: GET
+2020-02-22 18:50:27.771 +00:00 [INF] Request: http localhost:9001/directsales  
+Request headers:
+Connection:keep-alive
+Accept:application/json, text/plain, */*
+Accept-Encoding:gzip, deflate, br
+Accept-Language:en-GB,en-US;q=0.9,en;q=0.8
+Authorization:Bearer eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiJpbWFtIiwibmJmIjoxNTgyMzk3NDE4LCJleHAiOjE1ODMwMDIyMTgsImlhdCI6MTU4MjM5NzQxOH0.yVqBxjyGmm1iztcX1BAsGi-6MR6b8hPl5UezQOzVJjro9DT-Fef3d527hC0IA_qaKAQuZU3vPFJ-K1_K3kIvyQ
+Host:localhost:9001
+Referer:http://localhost:3000/directsales
+User-Agent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.106 Safari/537.36
+Origin:http://localhost:3000
+Sec-Fetch-Dest:empty
+Sec-Fetch-Site:same-site
+Sec-Fetch-Mode:cors
+Response: 404: 
+Response headers: 
+
+2020-02-22 18:50:32.159 +00:00 [WRN] requestId: 0HLTNO8FQJGCA:00000009, previousRequestId: no previous request id, message: DownstreamRouteFinderMiddleware setting pipeline errors. IDownstreamRouteFinder returned Error Code: UnableToFindDownstreamRouteError Message: Failed to match ReRoute configuration for upstream path: /directsales, verb: GET.
+2020-02-22 18:50:32.159 +00:00 [WRN] requestId: 0HLTNO8FQJGCA:00000009, previousRequestId: no previous request id, message: Failed to match ReRoute configuration for upstream path: /directsales, verb: GET.
+2020-02-22 18:50:32.160 +00:00 [WRN] requestId: 0HLTNO8FQJGCA:00000009, previousRequestId: no previous request id, message: Error Code: UnableToFindDownstreamRouteError Message: Failed to match ReRoute configuration for upstream path: /directsales, verb: GET. errors found in ResponderMiddleware. Setting error response for request path:/directsales, request method: GET
+2020-02-22 18:50:32.160 +00:00 [INF] Request: http localhost:9001/directsales  
+Request headers:
+Connection:keep-alive
+Accept:application/json, text/plain, */*
+Accept-Encoding:gzip, deflate, br
+Accept-Language:en-GB,en-US;q=0.9,en;q=0.8
+Authorization:Bearer eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiJpbWFtIiwibmJmIjoxNTgyMzk3NDE4LCJleHAiOjE1ODMwMDIyMTgsImlhdCI6MTU4MjM5NzQxOH0.yVqBxjyGmm1iztcX1BAsGi-6MR6b8hPl5UezQOzVJjro9DT-Fef3d527hC0IA_qaKAQuZU3vPFJ-K1_K3kIvyQ
+Host:localhost:9001
+Referer:http://localhost:3000/directsales
+User-Agent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.106 Safari/537.36
+Origin:http://localhost:3000
+Sec-Fetch-Dest:empty
+Sec-Fetch-Site:same-site
+Sec-Fetch-Mode:cors
+Response: 404: 
+Response headers: 
+
+2020-02-22 18:51:46.131 +00:00 [INF] requestId: 0HLTNO8FQJGCA:0000000B, previousRequestId: no previous request id, message: EndpointRateLimiting is not enabled for /api/directsales
+2020-02-22 18:51:46.131 +00:00 [INF] requestId: 0HLTNO8FQJGCA:0000000B, previousRequestId: no previous request id, message: /directsales is an authenticated route. AuthenticationMiddleware checking if client is authenticated
+2020-02-22 18:51:46.134 +00:00 [INF] requestId: 0HLTNO8FQJGCA:0000000B, previousRequestId: no previous request id, message: Client has been authenticated for /directsales
+2020-02-22 18:51:46.135 +00:00 [INF] requestId: 0HLTNO8FQJGCA:0000000B, previousRequestId: no previous request id, message: route is authenticated scopes must be checked
+2020-02-22 18:51:46.135 +00:00 [INF] requestId: 0HLTNO8FQJGCA:0000000B, previousRequestId: no previous request id, message: user scopes is authorised calling next authorisation checks
+2020-02-22 18:51:46.135 +00:00 [INF] requestId: 0HLTNO8FQJGCA:0000000B, previousRequestId: no previous request id, message: /api/directsales route does not require user to be authorised
+2020-02-22 18:51:46.184 +00:00 [INF] requestId: 0HLTNO8FQJGCA:0000000B, previousRequestId: no previous request id, message: 200 (OK) status code, request uri: http://localhost:5000/api/directsales
+2020-02-22 18:51:46.186 +00:00 [INF] Request: http localhost:9001/directsales  
+Request headers:
+Connection:keep-alive
+Accept:application/json, text/plain, */*
+Accept-Encoding:gzip, deflate, br
+Accept-Language:en-GB,en-US;q=0.9,en;q=0.8
+Authorization:Bearer eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiJpbWFtIiwibmJmIjoxNTgyMzk3NDE4LCJleHAiOjE1ODMwMDIyMTgsImlhdCI6MTU4MjM5NzQxOH0.yVqBxjyGmm1iztcX1BAsGi-6MR6b8hPl5UezQOzVJjro9DT-Fef3d527hC0IA_qaKAQuZU3vPFJ-K1_K3kIvyQ
+Host:localhost:9001
+Referer:http://localhost:3000/directsales
+User-Agent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.106 Safari/537.36
+Origin:http://localhost:3000
+Sec-Fetch-Dest:empty
+Sec-Fetch-Site:same-site
+Sec-Fetch-Mode:cors
+Response: 200: [{"id":"a4b8036c-ea25-4a56-a468-57629f0616cd","name":"DirectSale1","directSaleType":"DS","endDate":"2020-01-26T12:50:30.969139"},{"id":"cf1620d7-13b5-4150-90b0-4e305ff84db2","name":"DirectSale2","directSaleType":"CO","endDate":"2020-01-27T12:50:30.9823357"},{"id":"9a622c1c-94ae-4c17-b684-426d973fed39","name":"DirectSale3","directSaleType":"DS","endDate":"2020-01-28T12:50:30.9823602"},{"id":"f3fcf095-c425-4993-9ab0-4b2198afd372","name":"DirectSale4","directSaleType":"DS","endDate":"2020-01-29T12:50:30.9823645"},{"id":"9f605706-46b2-4332-be97-4a6a526a779f","name":"DirectSale5","directSaleType":"CO","endDate":"2020-01-30T12:50:30.9823889"},{"id":"6a83df25-4fa9-4fbd-9c9f-3d958321229f","name":"DirectSale6","directSaleType":"CO","endDate":"2020-01-31T12:50:30.9823924"},{"id":"959a3e08-0bdc-451e-a98e-dbbaa1462ade","name":"DirectSale7","directSaleType":"DS","endDate":"2020-02-01T12:50:30.9823938"},{"id":"fb7b870f-973a-4acb-a422-76991991f79b","name":"DirectSale8","directSaleType":"CO","endDate":"2020-02-02T12:50:30.9823958"},{"id":"27f8c871-808c-4584-915d-e4d7f99e34c5","name":"DirectSale9","directSaleType":"DS","endDate":"2020-02-03T12:50:30.9823991"},{"id":"df86dda3-8d59-45b7-86fb-371a073be221","name":"DirectSale10","directSaleType":"CO","endDate":"2020-02-04T12:50:30.9824035"},{"id":"fe67e082-1cfd-4fa9-830d-d65a5cc204e8","name":"DirectSale11","directSaleType":"DS","endDate":"2020-02-05T12:50:30.9824069"},{"id":"61ce694b-6eec-42ac-95e7-4d6d2e048942","name":"DS_FF","directSaleType":"directsale","endDate":"2020-01-26T08:48:16.531"},{"id":"bc4f444b-f4dd-4305-ab2b-a25c907a9db1","name":"DS_Validate","directSaleType":"directsale","endDate":"2020-01-26T09:24:50.215"}]
+Response headers: 
+Date:Sat, 22 Feb 2020 18:51:46 GMT
+Content-Type:application/json; charset=utf-8
+Server:Kestrel
+Access-Control-Allow-Credentials:true
+Access-Control-Allow-Origin:http://localhost:3000
+Access-Control-Expose-Headers:WWW-Authenticate
+Content-Length:1681
+
+2020-02-22 18:51:58.521 +00:00 [WRN] requestId: 0HLTNO8FQJGC8:00000003, previousRequestId: no previous request id, message: DownstreamRouteFinderMiddleware setting pipeline errors. IDownstreamRouteFinder returned Error Code: UnableToFindDownstreamRouteError Message: Failed to match ReRoute configuration for upstream path: /directsales/, verb: GET.
+2020-02-22 18:51:58.522 +00:00 [WRN] requestId: 0HLTNO8FQJGC8:00000003, previousRequestId: no previous request id, message: Failed to match ReRoute configuration for upstream path: /directsales/, verb: GET.
+2020-02-22 18:51:58.522 +00:00 [WRN] requestId: 0HLTNO8FQJGC8:00000003, previousRequestId: no previous request id, message: Error Code: UnableToFindDownstreamRouteError Message: Failed to match ReRoute configuration for upstream path: /directsales/, verb: GET. errors found in ResponderMiddleware. Setting error response for request path:/directsales/, request method: GET
+2020-02-22 18:51:58.522 +00:00 [INF] Request: http localhost:9001/directsales/  
+Request headers:
+Cache-Control:max-age=0
+Connection:keep-alive
+Accept:text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+Accept-Encoding:gzip, deflate, br
+Accept-Language:en-GB,en-US;q=0.9,en;q=0.8
+Cookie:_ga=GA1.1.745071743.1551113804
+Host:localhost:9001
+User-Agent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.106 Safari/537.36
+Upgrade-Insecure-Requests:1
+Sec-Fetch-Dest:document
+Sec-Fetch-Site:cross-site
+Sec-Fetch-Mode:navigate
+Sec-Fetch-User:?1
+Response: 404: 
+Response headers: 
+
+2020-02-22 18:52:07.704 +00:00 [INF] requestId: 0HLTNO8FQJGC8:00000004, previousRequestId: no previous request id, message: EndpointRateLimiting is not enabled for /api/directsales/{id}
+2020-02-22 18:52:07.704 +00:00 [INF] requestId: 0HLTNO8FQJGC8:00000004, previousRequestId: no previous request id, message: No authentication needed for /directsales/a4b8036c-ea25-4a56-a468-57629f0616cd
+2020-02-22 18:52:07.704 +00:00 [INF] requestId: 0HLTNO8FQJGC8:00000004, previousRequestId: no previous request id, message: /api/directsales/{id} route does not require user to be authorised
+2020-02-22 18:52:07.764 +00:00 [INF] requestId: 0HLTNO8FQJGC8:00000004, previousRequestId: no previous request id, message: 200 (OK) status code, request uri: http://localhost:5000/api/directsales/a4b8036c-ea25-4a56-a468-57629f0616cd
+2020-02-22 18:52:07.766 +00:00 [INF] Request: http localhost:9001/directsales/a4b8036c-ea25-4a56-a468-57629f0616cd  
+Request headers:
+Connection:keep-alive
+Accept:text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+Accept-Encoding:gzip, deflate, br
+Accept-Language:en-GB,en-US;q=0.9,en;q=0.8
+Cookie:_ga=GA1.1.745071743.1551113804
+Host:localhost:9001
+User-Agent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.106 Safari/537.36
+Upgrade-Insecure-Requests:1
+Sec-Fetch-Dest:document
+Sec-Fetch-Site:none
+Sec-Fetch-Mode:navigate
+Response: 200: {"id":"a4b8036c-ea25-4a56-a468-57629f0616cd","name":"DirectSale1","directSaleType":"DS","endDate":"2020-01-26T12:50:30.969139"}
+Response headers: 
+Date:Sat, 22 Feb 2020 18:52:07 GMT
+Content-Type:application/json; charset=utf-8
+Server:Kestrel
+Content-Length:127
+
+2020-02-22 18:54:04.752 +00:00 [INF] requestId: 0HLTNO8FQJGCC:00000002, previousRequestId: no previous request id, message: EndpointRateLimiting is not enabled for /api/directsales
+2020-02-22 18:54:04.752 +00:00 [INF] requestId: 0HLTNO8FQJGCC:00000002, previousRequestId: no previous request id, message: /directsales is an authenticated route. AuthenticationMiddleware checking if client is authenticated
+2020-02-22 18:54:04.755 +00:00 [INF] requestId: 0HLTNO8FQJGCC:00000002, previousRequestId: no previous request id, message: Client has been authenticated for /directsales
+2020-02-22 18:54:04.755 +00:00 [INF] requestId: 0HLTNO8FQJGCC:00000002, previousRequestId: no previous request id, message: route is authenticated scopes must be checked
+2020-02-22 18:54:04.755 +00:00 [INF] requestId: 0HLTNO8FQJGCC:00000002, previousRequestId: no previous request id, message: user scopes is authorised calling next authorisation checks
+2020-02-22 18:54:04.755 +00:00 [INF] requestId: 0HLTNO8FQJGCC:00000002, previousRequestId: no previous request id, message: /api/directsales route does not require user to be authorised
+2020-02-22 18:54:04.793 +00:00 [INF] requestId: 0HLTNO8FQJGCC:00000002, previousRequestId: no previous request id, message: 200 (OK) status code, request uri: http://localhost:5000/api/directsales
+2020-02-22 18:54:04.795 +00:00 [INF] Request: http localhost:9001/directsales  
+Request headers:
+Connection:keep-alive
+Accept:application/json, text/plain, */*
+Accept-Encoding:gzip, deflate, br
+Accept-Language:en-GB,en-US;q=0.9,en;q=0.8
+Authorization:Bearer eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiJpbWFtIiwibmJmIjoxNTgyMzk3NDE4LCJleHAiOjE1ODMwMDIyMTgsImlhdCI6MTU4MjM5NzQxOH0.yVqBxjyGmm1iztcX1BAsGi-6MR6b8hPl5UezQOzVJjro9DT-Fef3d527hC0IA_qaKAQuZU3vPFJ-K1_K3kIvyQ
+Host:localhost:9001
+Referer:http://localhost:3000/directsales
+User-Agent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.106 Safari/537.36
+Origin:http://localhost:3000
+Sec-Fetch-Dest:empty
+Sec-Fetch-Site:same-site
+Sec-Fetch-Mode:cors
+Response: 200: [{"id":"a4b8036c-ea25-4a56-a468-57629f0616cd","name":"DirectSale1","directSaleType":"DS","endDate":"2020-01-26T12:50:30.969139"},{"id":"cf1620d7-13b5-4150-90b0-4e305ff84db2","name":"DirectSale2","directSaleType":"CO","endDate":"2020-01-27T12:50:30.9823357"},{"id":"9a622c1c-94ae-4c17-b684-426d973fed39","name":"DirectSale3","directSaleType":"DS","endDate":"2020-01-28T12:50:30.9823602"},{"id":"f3fcf095-c425-4993-9ab0-4b2198afd372","name":"DirectSale4","directSaleType":"DS","endDate":"2020-01-29T12:50:30.9823645"},{"id":"9f605706-46b2-4332-be97-4a6a526a779f","name":"DirectSale5","directSaleType":"CO","endDate":"2020-01-30T12:50:30.9823889"},{"id":"6a83df25-4fa9-4fbd-9c9f-3d958321229f","name":"DirectSale6","directSaleType":"CO","endDate":"2020-01-31T12:50:30.9823924"},{"id":"959a3e08-0bdc-451e-a98e-dbbaa1462ade","name":"DirectSale7","directSaleType":"DS","endDate":"2020-02-01T12:50:30.9823938"},{"id":"fb7b870f-973a-4acb-a422-76991991f79b","name":"DirectSale8","directSaleType":"CO","endDate":"2020-02-02T12:50:30.9823958"},{"id":"27f8c871-808c-4584-915d-e4d7f99e34c5","name":"DirectSale9","directSaleType":"DS","endDate":"2020-02-03T12:50:30.9823991"},{"id":"df86dda3-8d59-45b7-86fb-371a073be221","name":"DirectSale10","directSaleType":"CO","endDate":"2020-02-04T12:50:30.9824035"},{"id":"fe67e082-1cfd-4fa9-830d-d65a5cc204e8","name":"DirectSale11","directSaleType":"DS","endDate":"2020-02-05T12:50:30.9824069"},{"id":"61ce694b-6eec-42ac-95e7-4d6d2e048942","name":"DS_FF","directSaleType":"directsale","endDate":"2020-01-26T08:48:16.531"},{"id":"bc4f444b-f4dd-4305-ab2b-a25c907a9db1","name":"DS_Validate","directSaleType":"directsale","endDate":"2020-01-26T09:24:50.215"}]
+Response headers: 
+Date:Sat, 22 Feb 2020 18:54:04 GMT
+Content-Type:application/json; charset=utf-8
+Server:Kestrel
+Access-Control-Allow-Credentials:true
+Access-Control-Allow-Origin:http://localhost:3000
+Access-Control-Expose-Headers:WWW-Authenticate
+Content-Length:1681
+
+2020-02-22 18:54:21.635 +00:00 [WRN] requestId: 0HLTNO8FQJGCC:00000004, previousRequestId: no previous request id, message: DownstreamRouteFinderMiddleware setting pipeline errors. IDownstreamRouteFinder returned Error Code: UnableToFindDownstreamRouteError Message: Failed to match ReRoute configuration for upstream path: /directsales/61ce694b-6eec-42ac-95e7-4d6d2e048942, verb: PUT.
+2020-02-22 18:54:21.635 +00:00 [WRN] requestId: 0HLTNO8FQJGCC:00000004, previousRequestId: no previous request id, message: Failed to match ReRoute configuration for upstream path: /directsales/61ce694b-6eec-42ac-95e7-4d6d2e048942, verb: PUT.
+2020-02-22 18:54:21.635 +00:00 [WRN] requestId: 0HLTNO8FQJGCC:00000004, previousRequestId: no previous request id, message: Error Code: UnableToFindDownstreamRouteError Message: Failed to match ReRoute configuration for upstream path: /directsales/61ce694b-6eec-42ac-95e7-4d6d2e048942, verb: PUT. errors found in ResponderMiddleware. Setting error response for request path:/directsales/61ce694b-6eec-42ac-95e7-4d6d2e048942, request method: PUT
+2020-02-22 18:54:21.636 +00:00 [INF] Request: http localhost:9001/directsales/61ce694b-6eec-42ac-95e7-4d6d2e048942  {"id":"61ce694b-6eec-42ac-95e7-4d6d2e048942","name":"DS_FF","endDate":"2020-01-26T08:48:16.531Z","directSaleType":"closed","date":"2020-01-26T08:48:00.000Z"}
+Request headers:
+Connection:keep-alive
+Content-Type:application/json;charset=UTF-8
+Accept:application/json, text/plain, */*
+Accept-Encoding:gzip, deflate, br
+Accept-Language:en-GB,en-US;q=0.9,en;q=0.8
+Authorization:Bearer eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiJpbWFtIiwibmJmIjoxNTgyMzk3NDE4LCJleHAiOjE1ODMwMDIyMTgsImlhdCI6MTU4MjM5NzQxOH0.yVqBxjyGmm1iztcX1BAsGi-6MR6b8hPl5UezQOzVJjro9DT-Fef3d527hC0IA_qaKAQuZU3vPFJ-K1_K3kIvyQ
+Host:localhost:9001
+Referer:http://localhost:3000/directsales/61ce694b-6eec-42ac-95e7-4d6d2e048942
+User-Agent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.106 Safari/537.36
+Origin:http://localhost:3000
+Content-Length:157
+Sec-Fetch-Dest:empty
+Sec-Fetch-Site:same-site
+Sec-Fetch-Mode:cors
+Response: 404: 
+Response headers: 
+
+2020-02-22 18:54:38.321 +00:00 [INF] requestId: 0HLTNO8FQJGCC:00000006, previousRequestId: no previous request id, message: EndpointRateLimiting is not enabled for /api/directsales
+2020-02-22 18:54:38.321 +00:00 [INF] requestId: 0HLTNO8FQJGCC:00000006, previousRequestId: no previous request id, message: /directsales is an authenticated route. AuthenticationMiddleware checking if client is authenticated
+2020-02-22 18:54:38.323 +00:00 [INF] requestId: 0HLTNO8FQJGCC:00000006, previousRequestId: no previous request id, message: Client has been authenticated for /directsales
+2020-02-22 18:54:38.324 +00:00 [INF] requestId: 0HLTNO8FQJGCC:00000006, previousRequestId: no previous request id, message: route is authenticated scopes must be checked
+2020-02-22 18:54:38.324 +00:00 [INF] requestId: 0HLTNO8FQJGCC:00000006, previousRequestId: no previous request id, message: user scopes is authorised calling next authorisation checks
+2020-02-22 18:54:38.324 +00:00 [INF] requestId: 0HLTNO8FQJGCC:00000006, previousRequestId: no previous request id, message: /api/directsales route does not require user to be authorised
+2020-02-22 18:54:38.355 +00:00 [INF] requestId: 0HLTNO8FQJGCC:00000006, previousRequestId: no previous request id, message: 200 (OK) status code, request uri: http://localhost:5000/api/directsales
+2020-02-22 18:54:38.357 +00:00 [INF] Request: http localhost:9001/directsales  
+Request headers:
+Connection:keep-alive
+Accept:application/json, text/plain, */*
+Accept-Encoding:gzip, deflate, br
+Accept-Language:en-GB,en-US;q=0.9,en;q=0.8
+Authorization:Bearer eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiJpbWFtIiwibmJmIjoxNTgyMzk3NDE4LCJleHAiOjE1ODMwMDIyMTgsImlhdCI6MTU4MjM5NzQxOH0.yVqBxjyGmm1iztcX1BAsGi-6MR6b8hPl5UezQOzVJjro9DT-Fef3d527hC0IA_qaKAQuZU3vPFJ-K1_K3kIvyQ
+Host:localhost:9001
+Referer:http://localhost:3000/directsales
+User-Agent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.106 Safari/537.36
+Origin:http://localhost:3000
+Sec-Fetch-Dest:empty
+Sec-Fetch-Site:same-site
+Sec-Fetch-Mode:cors
+Response: 200: [{"id":"a4b8036c-ea25-4a56-a468-57629f0616cd","name":"DirectSale1","directSaleType":"DS","endDate":"2020-01-26T12:50:30.969139"},{"id":"cf1620d7-13b5-4150-90b0-4e305ff84db2","name":"DirectSale2","directSaleType":"CO","endDate":"2020-01-27T12:50:30.9823357"},{"id":"9a622c1c-94ae-4c17-b684-426d973fed39","name":"DirectSale3","directSaleType":"DS","endDate":"2020-01-28T12:50:30.9823602"},{"id":"f3fcf095-c425-4993-9ab0-4b2198afd372","name":"DirectSale4","directSaleType":"DS","endDate":"2020-01-29T12:50:30.9823645"},{"id":"9f605706-46b2-4332-be97-4a6a526a779f","name":"DirectSale5","directSaleType":"CO","endDate":"2020-01-30T12:50:30.9823889"},{"id":"6a83df25-4fa9-4fbd-9c9f-3d958321229f","name":"DirectSale6","directSaleType":"CO","endDate":"2020-01-31T12:50:30.9823924"},{"id":"959a3e08-0bdc-451e-a98e-dbbaa1462ade","name":"DirectSale7","directSaleType":"DS","endDate":"2020-02-01T12:50:30.9823938"},{"id":"fb7b870f-973a-4acb-a422-76991991f79b","name":"DirectSale8","directSaleType":"CO","endDate":"2020-02-02T12:50:30.9823958"},{"id":"27f8c871-808c-4584-915d-e4d7f99e34c5","name":"DirectSale9","directSaleType":"DS","endDate":"2020-02-03T12:50:30.9823991"},{"id":"df86dda3-8d59-45b7-86fb-371a073be221","name":"DirectSale10","directSaleType":"CO","endDate":"2020-02-04T12:50:30.9824035"},{"id":"fe67e082-1cfd-4fa9-830d-d65a5cc204e8","name":"DirectSale11","directSaleType":"DS","endDate":"2020-02-05T12:50:30.9824069"},{"id":"61ce694b-6eec-42ac-95e7-4d6d2e048942","name":"DS_FF","directSaleType":"directsale","endDate":"2020-01-26T08:48:16.531"},{"id":"bc4f444b-f4dd-4305-ab2b-a25c907a9db1","name":"DS_Validate","directSaleType":"directsale","endDate":"2020-01-26T09:24:50.215"}]
+Response headers: 
+Date:Sat, 22 Feb 2020 18:54:38 GMT
+Content-Type:application/json; charset=utf-8
+Server:Kestrel
+Access-Control-Allow-Credentials:true
+Access-Control-Allow-Origin:http://localhost:3000
+Access-Control-Expose-Headers:WWW-Authenticate
+Content-Length:1681
+
+2020-02-22 18:54:54.808 +00:00 [INF] requestId: 0HLTNO8FQJGCC:00000008, previousRequestId: no previous request id, message: EndpointRateLimiting is not enabled for /api/directsales
+2020-02-22 18:54:54.809 +00:00 [INF] requestId: 0HLTNO8FQJGCC:00000008, previousRequestId: no previous request id, message: /directsales is an authenticated route. AuthenticationMiddleware checking if client is authenticated
+2020-02-22 18:54:54.810 +00:00 [INF] requestId: 0HLTNO8FQJGCC:00000008, previousRequestId: no previous request id, message: Client has been authenticated for /directsales
+2020-02-22 18:54:54.810 +00:00 [INF] requestId: 0HLTNO8FQJGCC:00000008, previousRequestId: no previous request id, message: route is authenticated scopes must be checked
+2020-02-22 18:54:54.810 +00:00 [INF] requestId: 0HLTNO8FQJGCC:00000008, previousRequestId: no previous request id, message: user scopes is authorised calling next authorisation checks
+2020-02-22 18:54:54.810 +00:00 [INF] requestId: 0HLTNO8FQJGCC:00000008, previousRequestId: no previous request id, message: /api/directsales route does not require user to be authorised
+2020-02-22 18:54:54.827 +00:00 [INF] requestId: 0HLTNO8FQJGCC:00000008, previousRequestId: no previous request id, message: 200 (OK) status code, request uri: http://localhost:5000/api/directsales
+2020-02-22 18:54:54.828 +00:00 [INF] Request: http localhost:9001/directsales  
+Request headers:
+Connection:keep-alive
+Accept:application/json, text/plain, */*
+Accept-Encoding:gzip, deflate, br
+Accept-Language:en-GB,en-US;q=0.9,en;q=0.8
+Authorization:Bearer eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiJpbWFtIiwibmJmIjoxNTgyMzk3NDE4LCJleHAiOjE1ODMwMDIyMTgsImlhdCI6MTU4MjM5NzQxOH0.yVqBxjyGmm1iztcX1BAsGi-6MR6b8hPl5UezQOzVJjro9DT-Fef3d527hC0IA_qaKAQuZU3vPFJ-K1_K3kIvyQ
+Host:localhost:9001
+Referer:http://localhost:3000/directsales
+User-Agent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.106 Safari/537.36
+Origin:http://localhost:3000
+Sec-Fetch-Dest:empty
+Sec-Fetch-Site:same-site
+Sec-Fetch-Mode:cors
+Response: 200: [{"id":"a4b8036c-ea25-4a56-a468-57629f0616cd","name":"DirectSale1","directSaleType":"DS","endDate":"2020-01-26T12:50:30.969139"},{"id":"cf1620d7-13b5-4150-90b0-4e305ff84db2","name":"DirectSale2","directSaleType":"CO","endDate":"2020-01-27T12:50:30.9823357"},{"id":"9a622c1c-94ae-4c17-b684-426d973fed39","name":"DirectSale3","directSaleType":"DS","endDate":"2020-01-28T12:50:30.9823602"},{"id":"f3fcf095-c425-4993-9ab0-4b2198afd372","name":"DirectSale4","directSaleType":"DS","endDate":"2020-01-29T12:50:30.9823645"},{"id":"9f605706-46b2-4332-be97-4a6a526a779f","name":"DirectSale5","directSaleType":"CO","endDate":"2020-01-30T12:50:30.9823889"},{"id":"6a83df25-4fa9-4fbd-9c9f-3d958321229f","name":"DirectSale6","directSaleType":"CO","endDate":"2020-01-31T12:50:30.9823924"},{"id":"959a3e08-0bdc-451e-a98e-dbbaa1462ade","name":"DirectSale7","directSaleType":"DS","endDate":"2020-02-01T12:50:30.9823938"},{"id":"fb7b870f-973a-4acb-a422-76991991f79b","name":"DirectSale8","directSaleType":"CO","endDate":"2020-02-02T12:50:30.9823958"},{"id":"27f8c871-808c-4584-915d-e4d7f99e34c5","name":"DirectSale9","directSaleType":"DS","endDate":"2020-02-03T12:50:30.9823991"},{"id":"df86dda3-8d59-45b7-86fb-371a073be221","name":"DirectSale10","directSaleType":"CO","endDate":"2020-02-04T12:50:30.9824035"},{"id":"fe67e082-1cfd-4fa9-830d-d65a5cc204e8","name":"DirectSale11","directSaleType":"DS","endDate":"2020-02-05T12:50:30.9824069"},{"id":"61ce694b-6eec-42ac-95e7-4d6d2e048942","name":"DS_FF","directSaleType":"directsale","endDate":"2020-01-26T08:48:16.531"},{"id":"bc4f444b-f4dd-4305-ab2b-a25c907a9db1","name":"DS_Validate","directSaleType":"directsale","endDate":"2020-01-26T09:24:50.215"}]
+Response headers: 
+Date:Sat, 22 Feb 2020 18:54:54 GMT
+Content-Type:application/json; charset=utf-8
+Server:Kestrel
+Access-Control-Allow-Credentials:true
+Access-Control-Allow-Origin:http://localhost:3000
+Access-Control-Expose-Headers:WWW-Authenticate
+Content-Length:1681
+
+2020-02-22 18:55:47.490 +00:00 [INF] requestId: 0HLTNO8FQJGCD:00000001, previousRequestId: no previous request id, message: EndpointRateLimiting is not enabled for /api/directsales/{urlPath}
+2020-02-22 18:55:47.490 +00:00 [INF] requestId: 0HLTNO8FQJGCD:00000001, previousRequestId: no previous request id, message: No authentication needed for /directsales/a4b8036c-ea25-4a56-a468-57629f0616cd
+2020-02-22 18:55:47.491 +00:00 [INF] requestId: 0HLTNO8FQJGCD:00000001, previousRequestId: no previous request id, message: /api/directsales/{urlPath} route does not require user to be authorised
+2020-02-22 18:55:47.518 +00:00 [INF] requestId: 0HLTNO8FQJGCD:00000001, previousRequestId: no previous request id, message: 200 (OK) status code, request uri: http://localhost:5000/api/directsales/a4b8036c-ea25-4a56-a468-57629f0616cd
+2020-02-22 18:55:47.519 +00:00 [INF] Request: http localhost:9001/directsales/a4b8036c-ea25-4a56-a468-57629f0616cd  
+Request headers:
+Cache-Control:max-age=0
+Connection:keep-alive
+Accept:text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+Accept-Encoding:gzip, deflate, br
+Accept-Language:en-GB,en-US;q=0.9,en;q=0.8
+Cookie:_ga=GA1.1.745071743.1551113804
+Host:localhost:9001
+User-Agent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.106 Safari/537.36
+Upgrade-Insecure-Requests:1
+Sec-Fetch-Dest:document
+Sec-Fetch-Site:none
+Sec-Fetch-Mode:navigate
+Sec-Fetch-User:?1
+Response: 200: {"id":"a4b8036c-ea25-4a56-a468-57629f0616cd","name":"DirectSale1","directSaleType":"DS","endDate":"2020-01-26T12:50:30.969139"}
+Response headers: 
+Date:Sat, 22 Feb 2020 18:55:47 GMT
+Content-Type:application/json; charset=utf-8
+Server:Kestrel
+Content-Length:127
+
+2020-02-22 18:55:52.234 +00:00 [INF] requestId: 0HLTNO8FQJGCD:00000002, previousRequestId: no previous request id, message: EndpointRateLimiting is not enabled for /api/directsales/{urlPath}
+2020-02-22 18:55:52.235 +00:00 [INF] requestId: 0HLTNO8FQJGCD:00000002, previousRequestId: no previous request id, message: No authentication needed for /directsales/a4b8036c-ea25-4a56-a468-57629f0616cd
+2020-02-22 18:55:52.235 +00:00 [INF] requestId: 0HLTNO8FQJGCD:00000002, previousRequestId: no previous request id, message: /api/directsales/{urlPath} route does not require user to be authorised
+2020-02-22 18:55:52.257 +00:00 [INF] requestId: 0HLTNO8FQJGCD:00000002, previousRequestId: no previous request id, message: 200 (OK) status code, request uri: http://localhost:5000/api/directsales/a4b8036c-ea25-4a56-a468-57629f0616cd
+2020-02-22 18:55:52.258 +00:00 [INF] Request: http localhost:9001/directsales/a4b8036c-ea25-4a56-a468-57629f0616cd  
+Request headers:
+Cache-Control:max-age=0
+Connection:keep-alive
+Accept:text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+Accept-Encoding:gzip, deflate, br
+Accept-Language:en-GB,en-US;q=0.9,en;q=0.8
+Cookie:_ga=GA1.1.745071743.1551113804
+Host:localhost:9001
+User-Agent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.106 Safari/537.36
+Upgrade-Insecure-Requests:1
+Sec-Fetch-Dest:document
+Sec-Fetch-Site:none
+Sec-Fetch-Mode:navigate
+Sec-Fetch-User:?1
+Response: 200: {"id":"a4b8036c-ea25-4a56-a468-57629f0616cd","name":"DirectSale1","directSaleType":"DS","endDate":"2020-01-26T12:50:30.969139"}
+Response headers: 
+Date:Sat, 22 Feb 2020 18:55:52 GMT
+Content-Type:application/json; charset=utf-8
+Server:Kestrel
+Content-Length:127
+
+2020-02-22 18:55:58.985 +00:00 [INF] requestId: 0HLTNO8FQJGCD:00000003, previousRequestId: no previous request id, message: EndpointRateLimiting is not enabled for /api/directsales
+2020-02-22 18:55:58.985 +00:00 [INF] requestId: 0HLTNO8FQJGCD:00000003, previousRequestId: no previous request id, message: /directsales is an authenticated route. AuthenticationMiddleware checking if client is authenticated
+2020-02-22 18:55:58.985 +00:00 [WRN] requestId: 0HLTNO8FQJGCD:00000003, previousRequestId: no previous request id, message: Client has NOT been authenticated for /directsales and pipeline error set. Request for authenticated route /directsales by  was unauthenticated
+2020-02-22 18:55:58.985 +00:00 [WRN] requestId: 0HLTNO8FQJGCD:00000003, previousRequestId: no previous request id, message: Request for authenticated route /directsales by  was unauthenticated
+2020-02-22 18:55:58.986 +00:00 [WRN] requestId: 0HLTNO8FQJGCD:00000003, previousRequestId: no previous request id, message: Error Code: UnauthenticatedError Message: Request for authenticated route /directsales by  was unauthenticated errors found in ResponderMiddleware. Setting error response for request path:/directsales, request method: GET
+2020-02-22 18:55:58.986 +00:00 [INF] Request: http localhost:9001/directsales  
+Request headers:
+Connection:keep-alive
+Accept:text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+Accept-Encoding:gzip, deflate, br
+Accept-Language:en-GB,en-US;q=0.9,en;q=0.8
+Cookie:_ga=GA1.1.745071743.1551113804
+Host:localhost:9001
+User-Agent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.106 Safari/537.36
+Upgrade-Insecure-Requests:1
+Sec-Fetch-Dest:document
+Sec-Fetch-Site:none
+Sec-Fetch-Mode:navigate
+Sec-Fetch-User:?1
+Response: 401: 
+Response headers: 
+
+2020-02-22 18:56:25.710 +00:00 [INF] requestId: 0HLTNO8FQJGCD:00000004, previousRequestId: no previous request id, message: EndpointRateLimiting is not enabled for /api/directsales
+2020-02-22 18:56:25.710 +00:00 [INF] requestId: 0HLTNO8FQJGCD:00000004, previousRequestId: no previous request id, message: /directsales is an authenticated route. AuthenticationMiddleware checking if client is authenticated
+2020-02-22 18:56:25.710 +00:00 [WRN] requestId: 0HLTNO8FQJGCD:00000004, previousRequestId: no previous request id, message: Client has NOT been authenticated for /directsales and pipeline error set. Request for authenticated route /directsales by  was unauthenticated
+2020-02-22 18:56:25.711 +00:00 [WRN] requestId: 0HLTNO8FQJGCD:00000004, previousRequestId: no previous request id, message: Request for authenticated route /directsales by  was unauthenticated
+2020-02-22 18:56:25.711 +00:00 [WRN] requestId: 0HLTNO8FQJGCD:00000004, previousRequestId: no previous request id, message: Error Code: UnauthenticatedError Message: Request for authenticated route /directsales by  was unauthenticated errors found in ResponderMiddleware. Setting error response for request path:/directsales, request method: GET
+2020-02-22 18:56:25.711 +00:00 [INF] Request: http localhost:9001/directsales  
+Request headers:
+Cache-Control:max-age=0
+Connection:keep-alive
+Accept:text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+Accept-Encoding:gzip, deflate, br
+Accept-Language:en-GB,en-US;q=0.9,en;q=0.8
+Cookie:_ga=GA1.1.745071743.1551113804
+Host:localhost:9001
+User-Agent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.106 Safari/537.36
+Upgrade-Insecure-Requests:1
+Sec-Fetch-Dest:document
+Sec-Fetch-Site:cross-site
+Sec-Fetch-Mode:navigate
+Sec-Fetch-User:?1
+Response: 401: 
+Response headers: 
+
+2020-02-22 18:57:05.654 +00:00 [INF] requestId: 0HLTNO8FQJGCD:00000005, previousRequestId: no previous request id, message: EndpointRateLimiting is not enabled for /api/directsales/{urlPath}
+2020-02-22 18:57:05.654 +00:00 [INF] requestId: 0HLTNO8FQJGCD:00000005, previousRequestId: no previous request id, message: /directsales/a4b8036c-ea25-4a56-a468-57629f0616cd is an authenticated route. AuthenticationMiddleware checking if client is authenticated
+2020-02-22 18:57:05.655 +00:00 [WRN] requestId: 0HLTNO8FQJGCD:00000005, previousRequestId: no previous request id, message: Client has NOT been authenticated for /directsales/a4b8036c-ea25-4a56-a468-57629f0616cd and pipeline error set. Request for authenticated route /directsales/a4b8036c-ea25-4a56-a468-57629f0616cd by  was unauthenticated
+2020-02-22 18:57:05.655 +00:00 [WRN] requestId: 0HLTNO8FQJGCD:00000005, previousRequestId: no previous request id, message: Request for authenticated route /directsales/a4b8036c-ea25-4a56-a468-57629f0616cd by  was unauthenticated
+2020-02-22 18:57:05.655 +00:00 [WRN] requestId: 0HLTNO8FQJGCD:00000005, previousRequestId: no previous request id, message: Error Code: UnauthenticatedError Message: Request for authenticated route /directsales/a4b8036c-ea25-4a56-a468-57629f0616cd by  was unauthenticated errors found in ResponderMiddleware. Setting error response for request path:/directsales/a4b8036c-ea25-4a56-a468-57629f0616cd, request method: GET
+2020-02-22 18:57:05.655 +00:00 [INF] Request: http localhost:9001/directsales/a4b8036c-ea25-4a56-a468-57629f0616cd  
+Request headers:
+Connection:keep-alive
+Accept:text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+Accept-Encoding:gzip, deflate, br
+Accept-Language:en-GB,en-US;q=0.9,en;q=0.8
+Cookie:_ga=GA1.1.745071743.1551113804
+Host:localhost:9001
+User-Agent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.106 Safari/537.36
+Upgrade-Insecure-Requests:1
+Sec-Fetch-Dest:document
+Sec-Fetch-Site:none
+Sec-Fetch-Mode:navigate
+Sec-Fetch-User:?1
+Response: 401: 
+Response headers: 
+

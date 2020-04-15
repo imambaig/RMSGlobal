@@ -1,15 +1,28 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
+using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.Logging.Console;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Microsoft.eShopOnContainers.BuildingBlocks.IntegrationEventLogEF
+namespace RMSGlobal.BuildingBlocks.IntegrationEventLogEF
 {
     public class IntegrationEventLogContext : DbContext
-    {       
+    {
+        //static LoggerFactory object
+        public static readonly ILoggerFactory loggerFactory = new LoggerFactory(new[] {
+     new ConsoleLoggerProvider((_, __) => true, true)});
+
+        //protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        //{
+        //    optionsBuilder.UseLoggerFactory(loggerFactory)  //tie-up DbContext with LoggerFactory object
+        //        .EnableSensitiveDataLogging();
+        //}
+
         public IntegrationEventLogContext(DbContextOptions<IntegrationEventLogContext> options) : base(options)
         {
+            
         }
 
         public DbSet<IntegrationEventLogEntry> IntegrationEventLogs { get; set; }

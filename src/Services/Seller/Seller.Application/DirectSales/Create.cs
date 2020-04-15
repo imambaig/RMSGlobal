@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Seller.Domain;
 using FluentValidation;
 
+
 namespace Seller.Application.DirectSales
 {
     public class Create
@@ -34,14 +35,15 @@ namespace Seller.Application.DirectSales
         public class Handler : IRequestHandler<Command>
         {
             private readonly DataContext _context;
-
             public Handler(DataContext context)
             {
                 _context = context;
             }
 
             public async Task<Unit> Handle(Command request, CancellationToken cancellationToken)
-            {
+            {               
+         
+
                 var directSale = new DirectSale
                 {
                     Id = request.Id,
