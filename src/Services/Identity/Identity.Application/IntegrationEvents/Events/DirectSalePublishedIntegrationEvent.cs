@@ -7,11 +7,19 @@ namespace Identity.Application.IntegrationEvents.Events
 {
     public class DirectSalePublishedIntegrationEvent : IntegrationEvent
     {
-        public string DirectSaleName { get; set; }
 
-        public DirectSalePublishedIntegrationEvent(string name)
+        public Guid Id { get; set; }
+        public string DirectSaleName { get; set; }
+        public string DirectSaleType { get; set; }
+
+        public DateTime? EndDate { get; set; }
+
+        public DirectSalePublishedIntegrationEvent(Guid id,string name, string directSaleType, DateTime? endDate)
         {
+            Id = id;
             DirectSaleName = name;
+            DirectSaleType = directSaleType;
+            EndDate = endDate;
         }
     }
 }

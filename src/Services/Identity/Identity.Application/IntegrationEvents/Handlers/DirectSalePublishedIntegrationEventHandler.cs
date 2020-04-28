@@ -26,7 +26,7 @@ namespace Identity.Application.IntegrationEvents.Handlers
         {
             var result = false;
 
-            if (!string.IsNullOrEmpty(eventMsg.DirectSaleName))
+            if (eventMsg.Id != Guid.Empty)
             {
                 /* var createOrderCommand = new CreateOrderCommand(eventMsg.Basket.Items, eventMsg.UserId, eventMsg.UserName, eventMsg.City, eventMsg.Street,
                      eventMsg.State, eventMsg.Country, eventMsg.ZipCode,
@@ -36,11 +36,15 @@ namespace Identity.Application.IntegrationEvents.Handlers
                  var requestCreateOrder = new IdentifiedCommand<CreateOrderCommand, bool>(createOrderCommand, eventMsg.RequestId);
                  result = await _mediator.Send(requestCreateOrder);*/
 
-                var details = await _mediator.Send(new Details.Query { Name = eventMsg.DirectSaleName });
+                var details = await _mediator.Send(new Details.Query { Id = eventMsg.Id });
                 if(details !=null && details.Id != Guid.Empty)
                 {
-                    var update = await _mediator.Send(new Edit.Command { Id = details.Id, EndDate = DateTime.Now });
-                }               
+                    var update = await _mediator.Send(new Edit.Command { Id = details.Id, Name=eventMsg.DirectSaleName, DirectSaleType=eventMsg.DirectSaleType,EndDate=eventMsg.EndDate});
+                }
+                else
+                {
+                     await _mediator.Send(new Create.Command { Id = eventMsg.Id, Name = eventMsg.DirectSaleName, DirectSaleType = eventMsg.DirectSaleType, EndDate = eventMsg.EndDate.HasValue? eventMsg.EndDate.Value:DateTime.Now });
+                }
 
             }
 

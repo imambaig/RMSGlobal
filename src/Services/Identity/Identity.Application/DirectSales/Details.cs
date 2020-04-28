@@ -32,8 +32,8 @@ namespace Identity.Application.DirectSales
 
                 var directsale = request.Id != Guid.Empty ? await _context.DirectSales.FindAsync(request.Id) : await _context.DirectSales.Where(x => x.Name == request.Name).FirstOrDefaultAsync();
 
-                if (directsale == null)
-                    throw new RestException(HttpStatusCode.NotFound, new { directsale = "Could not find directsale" });
+                ////if (directsale == null)
+                ////    throw new RestException(HttpStatusCode.NotFound, new { directsale = "Could not find directsale" });
 
                 return directsale;
             }

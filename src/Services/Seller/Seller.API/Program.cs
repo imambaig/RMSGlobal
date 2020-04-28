@@ -3,7 +3,9 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.Options;
 using RMSGlobal.BuildingBlocks.IntegrationEventLogEF;
+using Seller.API.Infrastructure;
 using Seller.Persistence;
 using System;
 
@@ -27,8 +29,17 @@ namespace Seller.API
                     context.Database.Migrate();
                     Seed.SeedData(context);
 
-                    
-                   // MigrateDbContext<IntegrationEventLogContext>((_, __) => { })
+                    var salesSessioncontext = services.GetRequiredService<DataContext>();
+                   
+                    var env = services.GetService<Microsoft.AspNetCore.Hosting.IHostingEnvironment>();
+                    var settings = services.GetService<IOptions<SellerSettings>>();
+                    var logger = services.GetService<ILogger<SalesSessionContextSeed>>();
+
+                    new SalesSessionContextSeed()
+                    .SeedAsync(salesSessioncontext, env, settings, logger)
+                    .Wait();
+
+
                 }
                 catch(Exception ex)
                 {

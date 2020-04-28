@@ -33,8 +33,9 @@ using RabbitMQ.Client;
 using Seller.Application.IntegrationEvents;
 using RMSGlobal.BuildingBlocks.IntegrationEventLogEF;
 using System.Reflection;
-using Seller.API.Infrastructure.AutofacModules;
-using Autofac.Extensions.DependencyInjection;
+using Seller.Application.Behaviours;
+using Seller.Domain.SeedWork;
+using Seller.Persistence.DomainEvents;
 
 namespace Seller.API
 {
@@ -55,7 +56,11 @@ namespace Seller.API
                 opt.UseSqlite(Configuration.GetConnectionString("DefaultConnection"));
             });
 
-          
+            //services.AddDbContext<SalesSessionContext>(opt =>
+            //{
+            //    opt.UseSqlite(Configuration.GetConnectionString("DefaultConnection"));
+            //});
+
 
             services.AddCors(Options =>
             {
@@ -92,7 +97,10 @@ namespace Seller.API
                                       });
             });
 
+            services.AddScoped(typeof(IPipelineBehavior<,>), typeof(TransactionBehaviour<,>));
+            services.AddScoped(typeof(IDomainEventDispatcher), typeof(DomainEventDispatcher));
             services.AddCustomIntegrations(Configuration)
+                    .AddCustomConfiguration(Configuration)
                     .AddEventBus(Configuration);
 
             ////configure autofac
@@ -149,6 +157,30 @@ namespace Seller.API
 
     static class CustomExtensionsMethods
     {
+        public static IServiceCollection AddCustomConfiguration(this IServiceCollection services, IConfiguration configuration)
+        {
+            services.AddOptions();
+            services.Configure<SellerSettings>(configuration);
+            services.Configure<ApiBehaviorOptions>(options =>
+            {
+                options.InvalidModelStateResponseFactory = context =>
+                {
+                    var problemDetails = new ValidationProblemDetails(context.ModelState)
+                    {
+                        Instance = context.HttpContext.Request.Path,
+                        Status = StatusCodes.Status400BadRequest,
+                        Detail = "Please refer to the errors property for additional details."
+                    };
+
+                    return new BadRequestObjectResult(problemDetails)
+                    {
+                        ContentTypes = { "application/problem+json", "application/problem+xml" }
+                    };
+                };
+            });
+
+            return services;
+        }
         public static IServiceCollection AddCustomIntegrations(this IServiceCollection services, IConfiguration configuration)
         {
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();

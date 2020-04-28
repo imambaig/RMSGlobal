@@ -11,8 +11,8 @@ namespace RMSGlobal.BuildingBlocks.IntegrationEventLogEF
     public class IntegrationEventLogContext : DbContext
     {
         //static LoggerFactory object
-        public static readonly ILoggerFactory loggerFactory = new LoggerFactory(new[] {
-     new ConsoleLoggerProvider((_, __) => true, true)});
+     //   public static readonly ILoggerFactory loggerFactory = new LoggerFactory(new[] {
+     //new ConsoleLoggerProvider((_, __) => true, true)});
 
         //protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         //{

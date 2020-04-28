@@ -5,7 +5,8 @@ using System.Threading;
 using System.Threading.Tasks;
 using Seller.Domain;
 using FluentValidation;
-
+using Seller.Application.IntegrationEvents.Events;
+using Seller.Application.IntegrationEvents;
 
 namespace Seller.Application.DirectSales
 {
@@ -35,9 +36,12 @@ namespace Seller.Application.DirectSales
         public class Handler : IRequestHandler<Command>
         {
             private readonly DataContext _context;
-            public Handler(DataContext context)
+            private readonly ISellerIntegrationEventService _sellerIntegrationEventService;
+
+            public Handler(DataContext context, ISellerIntegrationEventService sellerIntegrationEventService)
             {
                 _context = context;
+                _sellerIntegrationEventService = sellerIntegrationEventService;
             }
 
             public async Task<Unit> Handle(Command request, CancellationToken cancellationToken)
@@ -56,7 +60,14 @@ namespace Seller.Application.DirectSales
                 _context.DirectSales.Add(directSale);
                 var success = await _context.SaveChangesAsync()>0;
 
-                if (success) return Unit.Value;
+                if (success)
+                {
+                    var _directSalePublishedStartedIntegrationEvent = new DirectSalePublishedIntegrationEvent(request.Id, request.Name, request.DirectSaleType, request.EndDate);
+                    //await _sellerIntegrationEventService.AddAndSaveEventAsync(_directSalePublishedStartedIntegrationEvent);
+                    //_context.Database.CommitTransaction();
+                    _sellerIntegrationEventService.PublishEvent(_directSalePublishedStartedIntegrationEvent);
+                    return Unit.Value;
+                }
                 throw new Exception("Problem Saving Changes");
 
             }

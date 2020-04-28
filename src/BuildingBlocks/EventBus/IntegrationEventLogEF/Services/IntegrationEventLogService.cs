@@ -37,11 +37,23 @@ namespace RMSGlobal.BuildingBlocks.IntegrationEventLogEF.Services
 
         public async Task<IEnumerable<IntegrationEventLogEntry>> RetrieveEventLogsPendingToPublishAsync()
         {
-            return await _integrationEventLogContext.IntegrationEventLogs
+            IEnumerable<IntegrationEventLogEntry> events = new List<IntegrationEventLogEntry>();
+
+            var eventlogs1 = _integrationEventLogContext.IntegrationEventLogs.Where(e => e.State == EventStateEnum.NotPublished);
+            //var eventlogs4 = _integrationEventLogContext.IntegrationEventLogs.Where(e => e.State == EventStateEnum.NotPublished).OrderBy(o => o.CreationTime).OrderBy(o => o.CreationTime).Select(e => e.DeserializeJsonContent(_eventTypes.Find(t => t.Name == e.EventTypeShortName))).ToList();
+            if(eventlogs1.Count()>0 && _eventTypes.Count() > 0)
+            {
+                return await _integrationEventLogContext.IntegrationEventLogs
                 .Where(e => e.State == EventStateEnum.NotPublished)
                 .OrderBy(o => o.CreationTime)
-                .Select(e => e.DeserializeJsonContent(_eventTypes.Find(t=> t.Name == e.EventTypeShortName)))
-                .ToListAsync();              
+                .Select(e => e.DeserializeJsonContent(_eventTypes.Find(t => t.Name == e.EventTypeShortName)))
+                .ToListAsync();
+            }
+            else
+            {
+                return events;
+            }
+                          
         }
 
         public Task SaveEventAsync(IntegrationEvent @event, DbTransaction transaction)

@@ -50,7 +50,7 @@ namespace Seller.Application.DirectSales
                 if (directSale == null)
                     throw new RestException(HttpStatusCode.NotFound, new { directsale = "Could not find directsale" });
 
-                _context.Database.BeginTransaction();
+                ////_context.Database.BeginTransaction();
                 // Add Integration event to clean the basket
 
                 directSale.Name = request.Name ?? directSale.Name;
@@ -61,10 +61,11 @@ namespace Seller.Application.DirectSales
 
                 if (success)
                 {
-                    var _directSalePublishedStartedIntegrationEvent = new DirectSalePublishedIntegrationEvent(request.Name);
-                    //await _sellerIntegrationEventService.AddAndSaveEventAsync(_directSalePublishedStartedIntegrationEvent);
-                    //_context.Database.CommitTransaction();
-                    _sellerIntegrationEventService.PublishEvent(_directSalePublishedStartedIntegrationEvent);
+                    var _directSalePublishedStartedIntegrationEvent = new DirectSalePublishedIntegrationEvent(request.Id,request.Name,request.DirectSaleType,request.EndDate);
+                    await _sellerIntegrationEventService.AddAndSaveEventAsync(_directSalePublishedStartedIntegrationEvent);
+                    ////_context.Database.CommitTransaction();
+                    
+                    //_sellerIntegrationEventService.PublishEvent(_directSalePublishedStartedIntegrationEvent);
                     return Unit.Value;
                 }
 

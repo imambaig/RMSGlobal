@@ -1,32 +1,25 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Storage;
-using Microsoft.Extensions.Logging;
-using Seller.Domain;
 using Seller.Domain.Aggregates.SalesSessionAggregate;
 using Seller.Domain.SeedWork;
 using Seller.Persistence.EntityConfigurations;
 using System;
+using System.Collections.Generic;
 using System.Data;
 using System.Linq;
+using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
 namespace Seller.Persistence
 {
-    // dotnet ef migrations add InitialCreate -p Seller.Persistence/ -s Seller.API/
-    // dotnet ef migrations add SeedVehicles -p seller.Persistence/ -s seller.API/
-    // dotnet ef migrations add "DirectSaleEntityAdded" -p Seller.Persistence/ -s Seller.API/
-
-    public class DataContext : DbContext
+    public class SalesSessionContext1 : DbContext, IUnitOfWork
     {
-
         private IDbContextTransaction _currentTransaction;
         private readonly IDomainEventDispatcher _dispatcher;
-        private readonly ILoggerFactory _loggerFactory;
-        public DataContext(DbContextOptions<DataContext> options, IDomainEventDispatcher dispatcher, ILoggerFactory loggerFactory) : base(options)
+        public SalesSessionContext1(DbContextOptions<SalesSessionContext1> options, IDomainEventDispatcher dispatcher) : base(options)
         {
             _dispatcher = dispatcher;
-            _loggerFactory = loggerFactory;
         }
 
         public IDbContextTransaction GetCurrentTransaction => _currentTransaction;
@@ -48,7 +41,7 @@ namespace Seller.Persistence
 
             // After executing this line all the changes (from the Command Handler and Domain Event Handlers) 
             // performed through the DbContext will be committed
-         
+
 
             return true;
         }
@@ -99,7 +92,7 @@ namespace Seller.Persistence
 
         public async Task DispatchDomainEventsAsync()
         {
-            var domainEntities =ChangeTracker
+            var domainEntities = ChangeTracker
                 .Entries<Entity>()
                 .Where(x => x.Entity.DomainEvents != null && x.Entity.DomainEvents.Any());
 
@@ -117,11 +110,6 @@ namespace Seller.Persistence
 
             await Task.WhenAll(tasks);
         }
-
-        public DbSet<Vehicle> Vehicles { get; set; }
-
-        public DbSet<DirectSale> DirectSales { get; set; }
-
         public DbSet<SalesSession> SalesSession { get; set; }
 
         public DbSet<SalesSessionStep> SalesSessionStep { get; set; }
@@ -130,20 +118,9 @@ namespace Seller.Persistence
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Vehicle>()
-                .HasData(
-                    new Vehicle { Id = 1, VIN = "VIN1VIN1VIN1VIN1", Registration = "Registration1" },
-                    new Vehicle { Id = 2, VIN = "VIN2VIN2VIN2VIN2", Registration = "Registration2" },
-                    new Vehicle { Id = 3, VIN = "VIN3VIN3VIN3VIN3", Registration = "Registration3" }
-                );
             modelBuilder.ApplyConfiguration(new SalesSessionEntityTypeConfiguration());
             modelBuilder.ApplyConfiguration(new SalesSessionStepEntityTypeConfiguration());
             modelBuilder.ApplyConfiguration(new SessionStatusEntityTypeConfiguration());
-
-        }
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-            optionsBuilder.UseLoggerFactory(_loggerFactory);
         }
     }
 }
