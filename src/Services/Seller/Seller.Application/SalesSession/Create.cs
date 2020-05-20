@@ -1,6 +1,7 @@
 ﻿using FluentValidation;
 using MediatR;
 using Seller.Application.IntegrationEvents;
+using Seller.Domain.Aggregates.SalesSessionAggregate;
 using Seller.Persistence;
 using System;
 using System.Threading;
@@ -27,12 +28,12 @@ namespace Seller.Application.SalesSession
 
         public class Handler : IRequestHandler<Command>
         {
-            private readonly DataContext _context;
+            private readonly ISalesSessionRepository _salesSessionRepository;
             private readonly ISellerIntegrationEventService _sellerIntegrationEventService;
 
-            public Handler(DataContext context)
+            public Handler(ISalesSessionRepository salesSessionRepository)
             {
-                _context = context;
+                _salesSessionRepository = salesSessionRepository;
                 
             }
 
@@ -40,11 +41,13 @@ namespace Seller.Application.SalesSession
             {
 
 
-                var salesSession = new Seller.Domain.Aggregates.SalesSessionAggregate.SalesSession(request.Id,request.Name);               
+                var salesSession = new Seller.Domain.Aggregates.SalesSessionAggregate.SalesSession(request.Id,request.Name);
 
-                _context.SalesSession.Add(salesSession);
-                var success = await _context.SaveChangesAsync() > 0;
-
+                //_context.SalesSession.Add(salesSession);
+                //var success = await _context.SaveChangesAsync() > 0;
+                _salesSessionRepository.Add(salesSession);
+                var success = await _salesSessionRepository.UnitOfWork
+                .SaveEntitiesAsync();
                 if (success)
                 {
                     /*var _directSalePublishedStartedIntegrationEvent = new DirectSalePublishedIntegrationEvent(request.Id, request.Name, request.DirectSaleType, request.EndDate);

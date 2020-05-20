@@ -29,10 +29,15 @@ namespace RMSGlobal.BuildingBlocks.IntegrationEventLogEF.Services
                     .ConfigureWarnings(warnings => warnings.Throw(RelationalEventId.QueryClientEvaluationWarning))
                     .Options);
 
-            _eventTypes = Assembly.Load(Assembly.GetEntryAssembly().FullName)
-                .GetTypes()
-                .Where(t => t.Name.EndsWith(nameof(IntegrationEvent)))
-                .ToList();
+            /* _eventTypes = Assembly.Load(Assembly.GetEntryAssembly().FullName)
+                 .GetTypes()
+                 .Where(t => t.Name.EndsWith(nameof(IntegrationEvent)))
+                 .ToList();*/
+                
+            _eventTypes = typeof().GetTypeInfo().Assembly
+            .GetTypes()
+            .Where(t => t.Name.EndsWith(nameof(IntegrationEvent)))
+            .ToList();
         }
 
         public async Task<IEnumerable<IntegrationEventLogEntry>> RetrieveEventLogsPendingToPublishAsync()

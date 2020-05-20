@@ -1,80 +1,65 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-//using System.Web.Http.Dependencies;
-using Catalogue.API.Graphql;
-using GraphiQl;
-using GraphQL.Http;
-using GraphQL;
-using GraphQL.Types;
+
+using Catalogue.API.Settings;
+using ElasticSearchManager;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.OpenApi.Models;
+using SearchManager;
 
 namespace Catalogue.API
 {
     public class Startup
     {
-        public IConfiguration Configuration { get; }
-
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
         }
+
+        public IConfiguration Configuration { get; }
+
         // This method gets called by the runtime. Use this method to add services to the container.
-        // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddControllers();
+            services.AddElasticsearch(Configuration);
+            services.AddScoped(typeof(ISearchManager), typeof(ElasticSearchManager.ElasticSearchManager));
 
-            // Register DepedencyResolver; this will be used when a GraphQL type needs to resolve a dependency
-            services.AddSingleton<IServiceProvider>(c => new DefaultServiceProvider());
-            services.AddSingleton<VehiclesQuery>();
-            services.AddSingleton<VehicleMutation>();
-            services.AddSingleton<VehicleType>();
-            services.AddSingleton<BuyerVehiclePriceType>();
-
-            //services.AddMvc(option => option.EnableEndpointRouting = false);
-            services.AddControllers().AddNewtonsoftJson();
-            services.AddHttpContextAccessor();
-            services.AddScoped<ISchema, VehicleSchema>();
-            services.AddScoped<IDocumentExecuter, DocumentExecuter>();
+            // Register the Swagger generator, defining 1 or more Swagger documents
+            services.AddSwaggerGen(swagger =>
+            {
+                swagger.SwaggerDoc("v1", new OpenApiInfo { Title = "Catalogue API" });
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+            app.UseSwagger();
+            app.UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "Catalogue API");
+            });
+
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
             }
 
-            app.UseRouting();
-            app.UseCors(options => options.AllowAnyHeader().AllowAnyMethod().AllowAnyOrigin());
-            // app.UseAuthentication();
+            app.UseHttpsRedirection();
 
-            app.UseGraphiql("/graphiql", options =>
-            {
-                options.GraphQlEndpoint = "/graphql";
-            });
+            app.UseRouting();
+
+            app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapControllerRoute("default", "{controller=Home}/{action=Index}/{id?}");
+                endpoints.MapControllers();
             });
-            //app.UseGraphiQl("/graphql");
 
-            //app.UseMvc();
-            /*app.UseEndpoints(endpoints =>
-            {
-                endpoints.MapGet("/", async context =>
-                {
-                    await context.Response.WriteAsync("Hello World!");
-                });
-            });*/
+            
         }
     }
 }

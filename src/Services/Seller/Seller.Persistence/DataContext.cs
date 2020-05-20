@@ -17,7 +17,7 @@ namespace Seller.Persistence
     // dotnet ef migrations add SeedVehicles -p seller.Persistence/ -s seller.API/
     // dotnet ef migrations add "DirectSaleEntityAdded" -p Seller.Persistence/ -s Seller.API/
 
-    public class DataContext : DbContext
+    public class DataContext : DbContext, IUnitOfWork
     {
 
         private IDbContextTransaction _currentTransaction;

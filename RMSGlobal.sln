@@ -120,7 +120,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Auction", "Auction", "{A694
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Catalogue", "Catalogue", "{3FF10ECE-7EA4-48C3-BBFF-9BE4EE5CE524}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Catalogue.API", "src\Services\Catalogue\Catalogue.API\Catalogue.API.csproj", "{977F875C-B9D3-4061-8399-C1BD1D2B88F0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cataloguegraphql.API", "src\Services\Catalogue\Cataloguegraphql.API\Cataloguegraphql.API.csproj", "{977F875C-B9D3-4061-8399-C1BD1D2B88F0}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{70F11834-0394-4514-A993-426E6F0CEC0D}"
 EndProject
@@ -140,7 +140,17 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Application.FunctionalTests
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IntegrationEventLogEF", "src\BuildingBlocks\EventBus\IntegrationEventLogEF\IntegrationEventLogEF.csproj", "{2BBED465-C04D-4A8C-9FC7-8CC0855411A2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Seller.BackgroundServices", "src\Services\Seller\Seller.BackgroundServices\Seller.BackgroundServices.csproj", "{E1E9EE4A-5378-48CF-A022-15DFA3552E82}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Seller.BackgroundServices", "src\Services\Seller\Seller.BackgroundServices\Seller.BackgroundServices.csproj", "{E1E9EE4A-5378-48CF-A022-15DFA3552E82}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Catalogue.API", "src\Services\Catalogue\Catalogue.API\Catalogue.API.csproj", "{78B67A3D-A0CF-4020-8D7A-53DBE58E8AD8}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Catalogue.Services", "src\Services\Catalogue\Catalogue.Services\Catalogue.Services.csproj", "{081798E8-C851-4302-8AD1-9F4E819055A7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SecondaryIndex", "SecondaryIndex", "{D7B4126D-0E32-441C-879B-C2D2EADFF545}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SearchManager", "src\BuildingBlocks\SecondaryIndex\SearchManager\SearchManager.csproj", "{B17A7D8C-0DFC-4686-8851-8061B6E076B0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ElasticSearchManager", "src\BuildingBlocks\SecondaryIndex\ElasticSearchManager\ElasticSearchManager.csproj", "{18097051-239C-4B47-8589-9650C506C4CF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -260,6 +270,22 @@ Global
 		{E1E9EE4A-5378-48CF-A022-15DFA3552E82}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E1E9EE4A-5378-48CF-A022-15DFA3552E82}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E1E9EE4A-5378-48CF-A022-15DFA3552E82}.Release|Any CPU.Build.0 = Release|Any CPU
+		{78B67A3D-A0CF-4020-8D7A-53DBE58E8AD8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{78B67A3D-A0CF-4020-8D7A-53DBE58E8AD8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{78B67A3D-A0CF-4020-8D7A-53DBE58E8AD8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{78B67A3D-A0CF-4020-8D7A-53DBE58E8AD8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{081798E8-C851-4302-8AD1-9F4E819055A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{081798E8-C851-4302-8AD1-9F4E819055A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{081798E8-C851-4302-8AD1-9F4E819055A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{081798E8-C851-4302-8AD1-9F4E819055A7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B17A7D8C-0DFC-4686-8851-8061B6E076B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B17A7D8C-0DFC-4686-8851-8061B6E076B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B17A7D8C-0DFC-4686-8851-8061B6E076B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B17A7D8C-0DFC-4686-8851-8061B6E076B0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{18097051-239C-4B47-8589-9650C506C4CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{18097051-239C-4B47-8589-9650C506C4CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{18097051-239C-4B47-8589-9650C506C4CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{18097051-239C-4B47-8589-9650C506C4CF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -311,6 +337,11 @@ Global
 		{8DA79C43-451A-4EB8-BC42-FE56E0048D76} = {AE83FE98-EB00-4065-85D7-0DC019BADE37}
 		{2BBED465-C04D-4A8C-9FC7-8CC0855411A2} = {72316E33-CF97-4DB6-A66A-014318DEFE9F}
 		{E1E9EE4A-5378-48CF-A022-15DFA3552E82} = {9D5CACDA-67A7-4EAD-AAD2-3D32FCEAAF99}
+		{78B67A3D-A0CF-4020-8D7A-53DBE58E8AD8} = {3FF10ECE-7EA4-48C3-BBFF-9BE4EE5CE524}
+		{081798E8-C851-4302-8AD1-9F4E819055A7} = {3FF10ECE-7EA4-48C3-BBFF-9BE4EE5CE524}
+		{D7B4126D-0E32-441C-879B-C2D2EADFF545} = {513571D3-5937-403F-96DC-C9D193CAB57B}
+		{B17A7D8C-0DFC-4686-8851-8061B6E076B0} = {D7B4126D-0E32-441C-879B-C2D2EADFF545}
+		{18097051-239C-4B47-8589-9650C506C4CF} = {D7B4126D-0E32-441C-879B-C2D2EADFF545}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {1EB11B5B-B954-4B00-83D3-62C981B8CDB9}

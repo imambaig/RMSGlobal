@@ -36,6 +36,8 @@ using System.Reflection;
 using Seller.Application.Behaviours;
 using Seller.Domain.SeedWork;
 using Seller.Persistence.DomainEvents;
+using Seller.Domain.Aggregates.SalesSessionAggregate;
+using Seller.Persistence.Repositories;
 
 namespace Seller.API
 {
@@ -97,6 +99,7 @@ namespace Seller.API
                                       });
             });
 
+            services.AddScoped(typeof(ISalesSessionRepository), typeof(SalesSessionRepository));
             services.AddScoped(typeof(IPipelineBehavior<,>), typeof(TransactionBehaviour<,>));
             services.AddScoped(typeof(IDomainEventDispatcher), typeof(DomainEventDispatcher));
             services.AddCustomIntegrations(Configuration)
